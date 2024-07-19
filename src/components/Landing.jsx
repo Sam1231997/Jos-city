@@ -46,8 +46,8 @@ const Landing =()=>{
      <div>
      <section className="relative bg-cover bg-center min-h-[6rem]">
          <div className="absolute inset-0"></div> 
-        <div className="bg-bgimage bg-contain bg-no-repeat w-[100%] min-h-[6rem] lg:bg-cover lg:min-h-[23rem] lg:w-full">
-            <img src="/images/JCITY LOGO 1.png" className="flex  w-[3.2rem] h-[3.8rem] lg:w-[8rem] lg:min-h-[12rem] lg:items-center lg:pt-[3rem] mx-auto"/>
+        <div className="bg-[url(/images/pic.png)]  bg-contain bg-no-repeat w-[100%] min-h-[6rem] lg:bg-cover lg:min-h-[23rem] lg:w-full">
+           
         </div>
         <div className="container mx-auto relative z-10 flex justify-center items-center h-full">
             <div className="text-center text-black px-[1rem]">
