@@ -29,7 +29,6 @@ const App = () => {
     
     <Router>
     <Header/>
-  
 
   <Routes>
     <Route path="/" element={<Landing />}/>
