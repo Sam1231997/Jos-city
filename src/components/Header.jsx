@@ -36,7 +36,7 @@ import axios from 'axios';
         <nav className="flex items-center justify-between p-4 bg-white shadow-xl">
           <div className="flex items-center space-x-4">
             <div className="flex items-center">
-              
+              <img src="/images/JCITY LOGO 1.png" alt="Logo" className="h-[100px] w-[70px]" />
             </div>
             {/* <!-- Hamburger Menu Button --> */}
             <div className="md:hidden">
@@ -61,23 +61,24 @@ import axios from 'axios';
               </button>
             </div>
             {/* <!-- Navigation Links for Desktop --> */}
-            
-        <div class="container mx-auto flex justify-between items-center py-6 px-6">
-            <div class="flex items-center space-x-10">
-                <img src="/images/JCITY LOGO 1.png" className="h-14 pr-[8rem]"/>
-                <nav>
-                     <ul className="flex space-x-10 text-[0.9rem] font-semibold ">
-                        <li><Link to="/nowij" className="text-gray-700 hover:text-green-600">NOW IN JOS</Link></li>
-                        <li><Link to="/accomodation" className="text-gray-700 hover:text-green-600">ACCOMMODATION</Link></li>
-                        <li><Link to="/restaurant" className="text-gray-700 hover:text-green-600">RESTAURANTS</Link></li>
-                        <li><Link to="/shopping" className="text-gray-700 hover:text-green-600">SHOPPING</Link></li>
-                        <li><Link to="/attraction" className="text-gray-700 hover:text-green-600">ATTRACTIONS</Link></li>
-                    </ul> 
-                </nav>
+            <div className="hidden md:flex space-x-12">
+              <div className="relative group">
+                <Link to='/nowij' className="text-black hover:text-green-600">NOW IN JOS</Link>
+              </div>
+              <div className="relative group">
+                <Link to="/accomodation" className="text-black hover:text-green-800">ACCOMMODATION</Link>
+              </div>
+              <div className="relative group">
+                <Link to="/restaurant" className="text-black hover:text-green-600">RESTAURANTS</Link>
+              </div>
+              <div className="relative group">
+                <Link to="/shopping" className="text-black hover:text-green-600">SHOPPING</Link>
+              </div>
+              <div className="relative group">
+                <Link to="/attraction" className="text-black hover:text-green-600">ATTRACTIONS</Link>
+              </div>
             </div>
-     
-        </div>
-   
+          </div>
           {/* <!-- Search Bar --> */}
           <form onChange={(e) => setSearch(e.target.value)} >
             <div className="relative">
@@ -91,7 +92,6 @@ import axios from 'axios';
               </div>
            
           </form>
-          </div>
         </nav>
         {/* <!-- Mobile Menu --> */}
         {isMenuOpen && (
@@ -105,6 +105,7 @@ import axios from 'axios';
             </div>
           </div>
         )}   
+         
         
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {/* shopping card */}
