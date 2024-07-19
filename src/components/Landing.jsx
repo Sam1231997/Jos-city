@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react'
 // import Navbar from './Navbar';
 import Footer from './Footer';
 // import Header from './Header';
+import { Link } from 'react-router-dom';
 
 const Landing =()=>{
     const [filter, setFilter] = useState('All');
@@ -46,7 +47,7 @@ const Landing =()=>{
      <section className="relative bg-cover bg-center min-h-[6rem]">
          <div className="absolute inset-0"></div> 
         <div className="bg-bgimage bg-contain bg-no-repeat w-[100%] min-h-[6rem] lg:bg-cover lg:min-h-[23rem] lg:w-full">
-            <img src="../assets/JCITY LOGO 1.png" className="flex  w-[3.2rem] h-[3.8rem] lg:w-[8rem] lg:min-h-[12rem] lg:items-center lg:pt-[3rem] mx-auto"/>
+            <img src="/images/JCITY LOGO 1.png" className="flex  w-[3.2rem] h-[3.8rem] lg:w-[8rem] lg:min-h-[12rem] lg:items-center lg:pt-[3rem] mx-auto"/>
         </div>
         <div className="container mx-auto relative z-10 flex justify-center items-center h-full">
             <div className="text-center text-black px-[1rem]">
@@ -60,13 +61,13 @@ const Landing =()=>{
     <section className="py-12  px-[1rem]">
         <div className="container mx-auto">
             <div class="flex lg:flex-row flex-col items-center gap-6 min-h-[20%]">
-                    <img src="../assets/Frame 43 (1).png" alt="Rayfield Resort" className="rounded-lg shadow-md overflow-hidden w-[100%] h-[100%] object-cover"/>
-                    <img src="../assets/Frame 46.png " alt="Asop Water Falls" className="rounded-lg shadow-md overflow-hidden w-[100%] h-[100%] object-cover"/>
-                    <img src="../assets/Frame 45.png" alt="Play Station" className="rounded-lg shadow-md overflow-hidden w-[100%] h-[100%] object-cover"/>
+                    <img src="/images/Frame 43 (1).png" alt="Rayfield Resort" className="rounded-lg shadow-md overflow-hidden w-[100%] h-[100%] object-cover"/>
+                    <img src="/images/Frame 46.png " alt="Asop Water Falls" className="rounded-lg shadow-md overflow-hidden w-[100%] h-[100%] object-cover"/>
+                    <img src="/images/Frame 45.png" alt="Play Station" className="rounded-lg shadow-md overflow-hidden w-[100%] h-[100%] object-cover"/>
             </div>
             </div>
             <div className="text-center mt-8">
-                <a href="attraction.html" className="inline-block bg-green-600 font-semibold text-[.95rem] text-white py-2 px-10 rounded">See All &rightarrow;</a>
+                <Link to="/see" className="inline-block bg-green-600 font-semibold text-[.95rem] text-white py-2 px-10 rounded">See All</Link>
             </div>
     </section>
 
@@ -78,7 +79,7 @@ const Landing =()=>{
         </div>
         <div className="container mx-auto mt-8 flex flex-col">
             <div className="bg-white rounded-lg flex flex-col lg:flex-row shadow-md overflow-hidden h-[23rem] lg:h-[25rem] lg:w-[82%] lg:mx-auto">
-                <img src="../assets/Frame 43.png" alt="Bacardi Restaurant and Cafe" className=" lg:p-[2rem] p-[1rem]"/>
+                <img src="/images/Frame 43.png" alt="Bacardi Restaurant and Cafe" className=" lg:p-[2rem] p-[1rem]"/>
                 <div className="p-4">
                     <h2 className="text-[1rem] lg:text-2xl font-semibold lg:pt-[6rem]">Bacardi Restaurant and Cafe</h2>
                     <p className="pt-[1rem] lg:pt-[1.8rem] text-[.8rem] lg:text-[1rem]">11 Dandaura Road, Off Wase Road, GRA, Jos, Plateau</p>
@@ -88,7 +89,7 @@ const Landing =()=>{
                 </div>
             </div>
             <div className="text-center mt-8">
-                <a href="attraction.html" className="inline-block bg-green-600 font-semibold text-[.95rem] text-white py-2 px-10 rounded">See All &rightarrow;</a>
+                <Link to ="/see" className="inline-block bg-green-600 font-semibold text-[.95rem] text-white py-2 px-10 rounded">See All</Link>
             </div>
         </div>
     </section>
@@ -103,7 +104,7 @@ const Landing =()=>{
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                     <div className="p-4">
-                        <img src="../assets/Frame 28.png"/>
+                        <img src="/images/Frame 28.png"/>
                         <h2 className="text-[1rem] lg:text-xl font-semibold pt-6">CoLab Jos Intro Meetup</h2>
                         <p className="mt-2 text-[.7rem] lg:text-[1rem]">NASCO MARKETING COMPANY LTD</p>
                         <div className="flex justify-between pt-[1rem]">
@@ -114,7 +115,7 @@ const Landing =()=>{
                 </div>
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                     <div className="p-4">
-                        <img src="../assets/Frame 28.png"/>
+                        <img src="/images/Frame 28.png"/>
                         <h2 className="text-[1rem] lg:text-xl font-semibold pt-6">CoLab Jos Intro Meetup</h2>
                         <p className="mt-2 text-[.7rem] lg:text-[1rem]">NASCO MARKETING COMPANY LTD</p>
                         <div className="flex justify-between pt-[1rem]">
@@ -125,7 +126,7 @@ const Landing =()=>{
                 </div>
             </div>
             <div className="text-center mt-8">
-                <a href="#" className="inline-block bg-green-600 text-white py-2 px-16 font-semibold text-[.95rem] rounded-md">See All &rightarrow;</a>
+                <a href="#" className="inline-block bg-green-600 text-white py-2 px-16 font-semibold text-[.95rem] rounded-md">See All </a>
             </div>
         </div>
     </section>

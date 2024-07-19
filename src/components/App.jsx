@@ -19,6 +19,7 @@ import Shopping from "./Shopping";
 import Attraction from "./Attraction";
 import Header from "./Header";
 import Landing from "./Landing";
+import Seeall from "./Seeall";
 
 
 
@@ -31,7 +32,9 @@ const App = () => {
     <Header/>
 
   <Routes>
+    
     <Route path="/" element={<Landing />}/>
+    <Route path="/see" element ={<Seeall/>}/>
     <Route path="/nowij" element={<NowIJ />} />
     <Route path="/shopping" element={<Shopping/>} />
     <Route path="/attraction" element={<Attraction/>} />
