@@ -98,10 +98,10 @@ import axios from 'axios';
           <div className="md:hidden">
             <div className="flex flex-col space-y-2 p-4">
               <Link to="/nowij" className="text-black hover:text-green-600">NOW IN JOS</Link>
-              <Link to="#" className="text-black hover:text-green-800">ACCOMMODATION</Link>
-              <Link to="#" className="text-black hover:text-green-600">RESTAURANTS</Link>
-              <Link to="#" className="text-black hover:text-green-600">SHOPPING</Link>
-              <Link to="#" className="text-black hover:text-green-600">ATTRACTIONS</Link>
+              <Link to="/accomodation" className="text-black hover:text-green-800">ACCOMMODATION</Link>
+              <Link to="/restaurant" className="text-black hover:text-green-600">RESTAURANTS</Link>
+              <Link to="shopping" className="text-black hover:text-green-600">SHOPPING</Link>
+              <Link to="attraction" className="text-black hover:text-green-600">ATTRACTIONS</Link>
             </div>
           </div>
         )}   
