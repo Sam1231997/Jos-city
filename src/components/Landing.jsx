@@ -41,7 +41,7 @@ const Landing =()=>{
     
     return(
         <>
-        <Header/>
+       
      <div>
      <section className="relative bg-cover bg-center min-h-[6rem]">
          <div className="absolute inset-0"></div> 
