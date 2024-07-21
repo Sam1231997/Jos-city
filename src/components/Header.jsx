@@ -89,20 +89,18 @@ import axios from 'axios';
             </div>
           </div>
           {/* <!-- Search Bar --> */}
-          <div >
-      <form onChange={(e) => setSearch(e.target.value)} >
-            <div className=" ">
+          <form onChange={(e) => setSearch(e.target.value)} className="flex-grow mx-4 md:mx-0">
+            <div className="relative">
               <input
                 type="text"
                 placeholder="Search"
-                className="px-4 py-2 border border-gray-300 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-green-600 "
+                className="px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-green-600"
                
               />
              
               </div>
            
-            </form>
-    </div>
+          </form>
         </nav>
         {/* <!-- Mobile Menu --> */}
         {isMenuOpen && (
