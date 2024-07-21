@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import Logo from './Logo';
+// import Logo from './Logo';
 // import Dropdown from './Dropdown';
-import Page from './Pages/Page';
+// import Page from './Pages/Page';
 import { NavLink } from 'react-router-dom';
-import { data } from './Data';
-import NowIJ from './Pages/NowIJ';
-import Home from './Home';
+// import { data } from './Data';
+// import NowIJ from './Pages/NowIJ';
+// import Home from './Home';
 import Search from './Search';
 
 const Nav = ({}) => {

@@ -20,6 +20,7 @@ import Attraction from "./Attraction";
 import Header from "./Header";
 import Landing from "./Landing";
 import Seeall from "./Seeall";
+import Nav from "./Nav";
 
 
 
@@ -28,7 +29,7 @@ import Seeall from "./Seeall";
 const App = () => {
   return(
     <BrowserRouter>
-    <Header/>
+    <Nav/>
 
   <Routes>
     

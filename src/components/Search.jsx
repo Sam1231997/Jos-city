@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
-import { data } from './Data';
+// import { data } from './Data';
 
 const Search = () => {
   const [search, setSearch] = useState('');
