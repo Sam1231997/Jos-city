@@ -17,7 +17,7 @@ import Accomodation from "./Accomodation";
 import Restaurant from "./Restaurant";
 import Shopping from "./Shopping";
 import Attraction from "./Attraction";
-import Header from "./Header";
+import Header2 from "./Header";
 import Landing from "./Landing";
 import Seeall from "./Seeall";
 
@@ -27,9 +27,9 @@ import Seeall from "./Seeall";
 
 const App = () => {
   return(
-    
+    // <Header/>
     <Router>
-    <Header/>
+    <Header2/>
 
   <Routes>
     
