@@ -122,7 +122,7 @@ const Nav = ({}) => {
         ):null}   
         <div className={`searchQuery overflow-y-auto bg-black bg-opacity-[.5/1] ${search && 'pt-[8rem] p-40'} `}>
         
-        </div>
+        </div>z
     </nav>
       
     </>

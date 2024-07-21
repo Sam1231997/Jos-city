@@ -47,16 +47,16 @@ const Shopping =()=>{
        
         <div>
         <div className="relative bg-cover bg-center min-h-[6rem]">
-    <div className="bg-[url(/images/shopping.png)] bg-contain bg-no-repeat w-[100%] min-h-[6rem] lg:bg-cover lg:min-h-[23rem] lg:w-full lg:bg-center">
+    <div className=" bg-contain bg-no-repeat w-[100%] min-h-[6rem] lg:bg-cover lg:min-h-[23rem] lg:w-full lg:bg-center">
+        <img src="/images/shopping.png" alt="" />
     </div>
 </div>
-
 {/* // <!-- Body --> */}
 
 <div className="container mx-auto px-4 py-12">
     <div className="flex justify-between flex-col lg:flex-row">
         <div className="flex items-center gap-1">
-            <h2 className="lg:text-[1.8rem] text-xl font-bold lg:font-semibold">RESTAURANTS</h2>
+            <h2 className="lg:text-[1.8rem] text-xl font-bold lg:font-semibold">SHOPPING</h2>
             <img src="/images/arrow.png" className="h-2 w-3 mt-2"/>
         </div>
         

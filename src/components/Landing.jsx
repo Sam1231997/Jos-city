@@ -45,10 +45,12 @@ const Landing =()=>{
        
      <div>
      <section className="relative bg-cover bg-center min-h-[6rem]">
-         <div className="absolute inset-0"></div> 
-        <div className="bg-[url(/images/pic.png)]  bg-contain bg-no-repeat w-[100%] min-h-[6rem] lg:bg-cover lg:min-h-[23rem] lg:w-full">
-           
-        </div>
+        
+     <div className="relative bg-cover bg-center min-h-[6rem]">
+    <div className=" bg-contain bg-no-repeat w-[100%] min-h-[6rem] lg:bg-cover lg:min-h-[23rem] lg:w-full lg:bg-center">
+        <img src="/images/pic.png" alt="" />
+    </div>
+</div>
         <div className="container mx-auto relative z-10 flex justify-center items-center h-full">
             <div className="text-center text-black px-[1rem]">
                 <h1 className="lg:text-4xl text-xl font-semibold leading-[auto] pt-[3rem]">DON'T WASTE A MINUTE!</h1>

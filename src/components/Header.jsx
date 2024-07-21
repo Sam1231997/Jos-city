@@ -37,7 +37,7 @@ import axios from 'axios';
           
             
           <div>
-              <Link to='/'><img src="JCITY LOGO 1.png" alt="Logo" className="h-[100px] w-[70px] float-left " /></Link>
+              <Link to='/'><img src="/images/logo.png" alt="Logo" className="h-[100px] w-[70px] float-left " /></Link>
             </div>
         
           <div className="flex items-center space-x-4">
@@ -77,7 +77,7 @@ import axios from 'axios';
               <Link to='/accomodation' className="text-black hover:text-green-600">Accomodations</Link>
               </div>
               <div className="relative group">
-              <Link to='/restaurant' className="text-black hover:text-green-600">Restaraurants</Link>
+              <Link to='/restaurant' className="text-black hover:text-green-600">Restaurants</Link>
               </div>
               <div className="relative group">
               <Link to='/shopping' className="text-black hover:text-green-600">Shopping</Link>
@@ -89,7 +89,7 @@ import axios from 'axios';
             </div>
           </div>
           {/* <!-- Search Bar --> */}
-          <form onChange={(e) => setSearch(e.target.value)} className="md:hidden">
+          <form onChange={(e) => setSearch(e.target.value)} >
             <div className="relative">
               <input
                 type="text"
