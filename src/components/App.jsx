@@ -20,7 +20,8 @@ import Attraction from "./Attraction";
 import Header from "./Header";
 import Landing from "./Landing";
 import Seeall from "./Seeall";
-import Nav from "./Nav";
+import Footer from "./Footer";
+// import Nav from "./Nav";
 
 
 

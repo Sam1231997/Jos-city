@@ -99,7 +99,7 @@ const Restaurant=()=>{
       </div>
     </div>
 
-       <Footer/> 
+  <Footer/>
         </div>
         
        

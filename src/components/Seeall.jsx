@@ -58,7 +58,7 @@ const Seeall =()=>{
             </div>
           ))}
           </div>
-          <Footer/>
+          
           </div>
        
         

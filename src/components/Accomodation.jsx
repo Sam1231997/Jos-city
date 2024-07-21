@@ -95,7 +95,7 @@ const Accomodation=()=>{
       </div>
     </div>
 
-       <Footer/> 
+ 
         </div>
         
          

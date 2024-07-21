@@ -99,7 +99,7 @@ const Attraction=()=>{
       </div>
     </div>
 
-       <Footer/> 
+      <Footer/>
         </div>
         
        

@@ -34,7 +34,7 @@ const Landing =()=>{
     }
   
     if (error) {
-      return <div>Error: {error.message}</div>;
+      return <div>BE PATIENT WE WILL GET BACK TO YOU SOON</div>;
     }
   
     const filteredEvents = filter === 'All' ? events.slice(0, 4)  : events.filter(event => event.type === filter);
@@ -131,10 +131,10 @@ const Landing =()=>{
         </div>
     </section>
      </div>
-    
+    <Footer/>
 
 
-        <Footer/>
+
         </>
     )
 }
