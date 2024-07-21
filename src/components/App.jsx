@@ -29,7 +29,7 @@ import Nav from "./Nav";
 const App = () => {
   return(
     <BrowserRouter>
-    <Nav/>
+    <Header/>
 
   <Routes>
     
