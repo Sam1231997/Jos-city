@@ -89,7 +89,7 @@ import axios from 'axios';
             </div>
           </div>
           {/* <!-- Search Bar --> */}
-          <form onChange={(e) => setSearch(e.target.value)} className="flex-grow mx-4 md:mx-0">
+          <form onChange={(e) => setSearch(e.target.value)} className="md:hidden">
             <div className="relative">
               <input
                 type="text"
