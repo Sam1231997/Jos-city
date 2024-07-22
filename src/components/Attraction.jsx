@@ -11,42 +11,41 @@ import Footer from './Footer';
 
 // import AfterRes from "./AfterRes"
 const Attraction=()=>{
-    // const [filter, setFilter] = useState('All');
-    // const [events, setEvents] = useState([]);
-    // const [loading, setLoading] = useState(true);
-    // const [error, setError] = useState(null);
+    const [filter, setFilter] = useState('All');
+    const [events, setEvents] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
   
     // Fetch data from API
-    // useEffect(() => {
-    //   const fetchData = async () => {
-    //     try {
-    //       const response = await fetch('http://localhost:7000/dbdata');
-    //       const result = await response.json();
-    //       setEvents(result);
-    //       setLoading(false);
-    //     } catch (error) {
-    //       setError(error);
-    //       setLoading(false);
-    //     }
-    //   };
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch('http://localhost:7000/dbdata');
+          const result = await response.json();
+          setEvents(result);
+          setLoading(false);
+        } catch (error) {
+          setError(error);
+          setLoading(false);
+        }
+      };
   
-    //   fetchData();
-    // }, []);
+      fetchData();
+    }, []);
   
-    // if (loading) {
-    //   return <div>Loading...</div>;
-    // }
+    if (loading) {
+      return <div>Loading...</div>;
+    }
   
-    // if (error) {
-    //   return <div>Error: {error.message}</div>;
-    // }
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    }
   
-    // const filteredEvents = filter === 'All' ? events : events.filter(event => event.type === filter);
+    const filteredEvents = filter === 'All' ? events : events.filter(event => event.type === filter);
     
     return(
-        <div>
-        <div>
-       
+      
+     
         <div>
         <div className="relative bg-cover bg-center min-h-[6rem]">
     <div className=" bg-contain bg-no-repeat w-[100%] min-h-[6rem] lg:bg-cover lg:min-h-[23rem] lg:w-full lg:bg-center">
@@ -55,6 +54,7 @@ const Attraction=()=>{
 </div>
 
 {/* // <!-- Body --> */}
+<div className="container mx-4 px-4 py-12">
 
 <div className="container mx-auto px-4 py-12">
     <div className="flex justify-between flex-col lg:flex-row">
@@ -66,10 +66,11 @@ const Attraction=()=>{
     </div>
 
     </div>
-    </div>
-    <p className='text-green-800 '>Loading................................</p>
+   
+    
 {/* BACKEND SIDE */}
-    {/* <div className="p-4">
+
+    <div className="p-4">
       <div className="flex space-x-4 mb-4">
         {['All', 'Museums','Amusement Parks', 'Water Fall', 'Mountains'].map(type => (
           <button
@@ -97,12 +98,12 @@ const Attraction=()=>{
           </div>
         ))}
         </div>
-      </div> */}
+      </div>
     </div>
 
       <Footer/>
+   <div/>
         </div>
-        
        
          
     )
