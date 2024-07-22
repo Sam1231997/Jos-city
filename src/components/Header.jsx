@@ -1,5 +1,6 @@
 
 import {useState} from 'react'
+import "../style.css"
   // import { data } from './Data';
   // import Filter from './Filter';
 //   import Search from "./Search";
@@ -8,6 +9,13 @@ import {Link} from "react-router-dom";
 // import axios from 'axios';
   const Header =()=> {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const toggleMenu = () => {
+      setIsMenuOpen(!isMenuOpen);
+    };
+
+    const closeMenu = () => {
+      setIsMenuOpen(false);
+    };
     const [search, setSearch] = useState('');
     
     // const [data, setData] = useState([]);
@@ -46,28 +54,7 @@ import {Link} from "react-router-dom";
             {/* <!-- Hamburger Menu Button --> */}
              
             
-            <div className="md:hidden flex items-center ">
-              
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="relative focus:outline-none"
-              >
-                <svg
-                  className="w-6 h-6 text-black"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                </svg>
-              </button>
-            </div>
+            
             {/* <!-- Navigation Links for Desktop --> */}
             <div className=" hidden md:flex gap-4 font-semibold ">
               <div className="relative-group">
@@ -77,7 +64,7 @@ import {Link} from "react-router-dom";
               <Link to='/accomodation' className="text-black hover:text-green-600">Accomodations</Link>
               </div>
               <div className="relative group">
-              <Link to='/restaurant' className="text-black hover:text-green-600">Restaraurants</Link>
+              <Link to='/restaurant' className="text-black hover:text-green-600">Restaurants</Link>
               </div>
               <div className="relative group">
               <Link to='/shopping' className="text-black hover:text-green-600">Shopping</Link>
@@ -106,27 +93,32 @@ import {Link} from "react-router-dom";
     
         </nav>
         {/* <!-- Mobile Menu --> */}
-        {isMenuOpen===true? (
-          <div className="md:hidden flex justify-between p-10">
+        <div>
+      <button onClick={toggleMenu} className="hamburger">
+        &#9776; 
+      </button>
+      <div className={`mobile-menu ${isMenuOpen ? 'open' : 'closed'}`}>
+          
             {/* <nav className='h-[8rem]'></nav> */}
-            <div className=''>
+            <div className="flex flex-col space-y-4 mb-4">
               
             <div className="relative-group">
-                <Link to='/nowij' className="text-black hover:text-green-600">Now In Jos</Link>
+                <Link to='/nowij' className="text-black hover:text-green-600" onClick={closeMenu} >Now In Jos</Link>
               </div>
               <div className="relative-group">
-              <Link to='/accomodation' className="text-black hover:text-green-600">Accomodation</Link>
+              <Link to='/accomodation' className="text-black hover:text-green-600" onClick={closeMenu}>Accomodations</Link>
               </div>
               <div className="relative-group">
-              <Link to='/restaurant' className="text-black hover:text-green-600">Restaurants</Link>
+              <Link to='/restaurant' className="text-black hover:text-green-600"onClick={closeMenu} >Restaurants</Link>
               </div>
               <div className="relative-group">
-              <Link to='/shopping' className="text-black hover:text-green-600">Shopping</Link>
+              <Link to='/shopping' className="text-black hover:text-green-600"onClick={closeMenu} >Shopping</Link>
               </div>
               <div className="relative-group">
-              <Link to='/attractions' className="text-black hover:text-green-600">Attractions</Link>
+              <Link to='/attraction' className="text-black hover:text-green-600"onClick={closeMenu} >Attractions</Link>
               </div>
             </div>
+            
             <div >
       <form onChange={(e) => setSearch(e.target.value)} >
             <div className=" ">
@@ -141,11 +133,11 @@ import {Link} from "react-router-dom";
            
             </form>
     </div>
+    
+    
     </div>
-    ): null}
-    <div className={`searchQuery overflow-y-auto bg-black bg-opacity-[.5/1] ${search && 'pt-[8rem] p-40'} `}>
-        
-        </div>
+    </div>
+    
         
 
         {/* the fetch cards */}
