@@ -1,5 +1,5 @@
 
-// import {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 // import {cards} from './Cards'
 // import Navbar from './Navbar';
 import Footer from './Footer';
@@ -9,37 +9,37 @@ import Footer from './Footer';
 const NowIJ =()=>{
     
    
-    // const [filter, setFilter] = useState('All');
-    // const [events, setEvents] = useState([]);
-    // const [loading, setLoading] = useState(true);
-    // const [error, setError] = useState(null);
+    const [filter, setFilter] = useState('All');
+    const [events, setEvents] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
   
     // Fetch data from API
-    // useEffect(() => {
-    //   const fetchData = async () => {
-    //     try {
-    //       const response = await fetch('http://localhost:7000/dbdata');
-    //       const result = await response.json();
-    //       setEvents(result);
-    //       setLoading(false);
-    //     } catch (error) {
-    //       setError(error);
-    //       setLoading(false);
-    //     }
-    //   };
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch('http://localhost:7000/dbdata');
+          const result = await response.json();
+          setEvents(result);
+          setLoading(false);
+        } catch (error) {
+          setError(error);
+          setLoading(false);
+        }
+      };
   
-    //   fetchData();
-    // }, []);
+      fetchData();
+    }, []);
   
-    // if (loading) {
-    //   return <div>Loading...</div>;
-    // }
+    if (loading) {
+      return <div>Loading...</div>;
+    }
   
-    // if (error) {
-    //   return <div>Error: {error.message}</div>;
-    // }
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    }
   
-    // const filteredEvents = filter === 'All' ? events.slice(0, 4)  : events.filter(event => event.type === filter);
+    const filteredEvents = filter === 'All' ? events.slice(0, 4)  : events.filter(event => event.type === filter);
     
     
     return(
@@ -66,20 +66,23 @@ const NowIJ =()=>{
 
     </div>
     </div>
-    <p className='text-green-800 bold'>Loading................................</p>
+    
 {/* BACKEND SIDE */}
-    {/* <div className="p-4">
-      <div className="flex space-x-4 mb-4">
-        {['All', 'Networking', 'Seminars', 'Tech', 'Sports','Wedding','Culture'].map(type => (
-          <button
-            key={type}
-            onClick={() => setFilter(type)}
-            className={`px-4 py-2 rounded-lg ${filter === type ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-800'}`}
-          >
-            {type}
-          </button>
-        ))}
-      </div>
+    <div className="p-4">
+    <div className="flex flex-wrap space-x-4 mb-4 md:space-x-4">
+  {['All', 'Networking', 'Seminars', 'Tech', 'Sports', 'Wedding', 'Culture'].map((type) => (
+    <button
+      key={type}
+      onClick={() => setFilter(type)}
+      className={`px-4 py-2 mb-2 w-full sm:w-auto rounded-lg ${
+        filter === type ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-800'
+      }`}
+    >
+      {type}
+    </button>
+  ))}
+</div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
         {filteredEvents.map(event => (
           <div key={event.id} className="bg-gray-100 border border-gray-200 rounded-lg overflow-hidden">
@@ -97,7 +100,7 @@ const NowIJ =()=>{
         ))}
         </div>
      
-      </div> */}
+      </div>
     </div>
 
        <Footer/> 

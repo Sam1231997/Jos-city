@@ -8,37 +8,37 @@ import Footer from '../components/Footer';
 // import useFetch from '../components/useFetch';
 
 const Accomodation=()=>{
-  //   const [filter, setFilter] = useState('All');
-  // const [events, setEvents] = useState([]);
-  // const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState(null);
+    const [filter, setFilter] = useState('All');
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   // Fetch data from API
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch('http://localhost:7000/dbdata');
-  //       const result = await response.json();
-  //       setEvents(result);
-  //       setLoading(false);
-  //     } catch (error) {
-  //       setError(error);
-  //       setLoading(false);
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:7000/dbdata');
+        const result = await response.json();
+        setEvents(result);
+        setLoading(false);
+      } catch (error) {
+        setError(error);
+        setLoading(false);
+      }
+    };
 
-  //   fetchData();
-  // }, []);
+    fetchData();
+  }, []);
 
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-  // if (error) {
-  //   return <div>Error: {error.message}</div>;
-  // }
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
-  // const filteredEvents = filter === 'All' ? events.slice(4,20): events.filter(event => event.type === filter);
+  const filteredEvents = filter === 'All' ? events.slice(4,20): events.filter(event => event.type === filter);
     return (
         <div>
         <div>
@@ -63,9 +63,9 @@ const Accomodation=()=>{
 
     </div>
     </div>
-    <p className='text-green-800 bold'>Loading................................</p>
+   
 {/* BACKEND SIDE */}
-    {/* <div className="p-4">
+    <div className="p-4">
       <div className="flex space-x-4 mb-4">
         {['All',  'Hotels', 'Appartments','Hospitals'].map(type => (
           <button
@@ -93,10 +93,10 @@ const Accomodation=()=>{
           </div>
         ))}
         </div>
-      </div> */}
+      </div>
     </div>
 
- 
+ <Footer/>
         </div>
         
          

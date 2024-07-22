@@ -70,18 +70,22 @@ const Attraction=()=>{
     
 {/* BACKEND SIDE */}
 
-    <div className="p-4">
-      <div className="flex space-x-4 mb-4">
-        {['All', 'Museums','Amusement Parks', 'Water Fall', 'Mountains'].map(type => (
-          <button
-            key={type}
-            onClick={() => setFilter(type)}
-            className={`px-4 py-2 rounded-lg ${filter === type ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-800'}`}
-          >
-            {type}
-          </button>
-        ))}
-      </div>
+<div className="p-4">
+  <div className="flex flex-wrap space-y-2 sm:space-y-0 sm:space-x-4 mb-4">
+    {['All', 'Museums', 'Amusement Parks', 'Water Fall', 'Mountains'].map((type) => (
+      <button
+        key={type}
+        onClick={() => setFilter(type)}
+        className={`px-4 py-2 rounded-lg ${
+          filter === type ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-800'
+        } w-full sm:w-auto`}
+      >
+        {type}
+      </button>
+    ))}
+  </div>
+
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
         {filteredEvents.map(event => (
           <div key={event.id} className="bg-gray-100 border border-gray-200 rounded-lg overflow-hidden">

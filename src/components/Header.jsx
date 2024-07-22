@@ -16,27 +16,27 @@ import {Link} from "react-router-dom";
     const closeMenu = () => {
       setIsMenuOpen(false);
     };
-    // const [search, setSearch] = useState('');
+    const [search, setSearch] = useState('');
     
-    // const [data, setData] = useState([]);
+    const [data, setData] = useState([]);
   
-    // useEffect(() => {
-    //   const fetchData = async () => {
-    //     try {
-    //       const response = await axios.get(`http://localhost:7000/dbdata`);
-    //       setData(response.data); // Assuming your API returns an array of items
-    //     console.log(response.data);
-    //     } catch (error) {
-    //       console.error('Error fetching data:', error);
-    //     }
-    //   };
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await axios.get(`http://localhost:7000/dbdata`);
+          setData(response.data); // Assuming your API returns an array of items
+        console.log(response.data);
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      };
   
-    //   if (search.trim() !== '') {
-    //     fetchData();
-    //   } else {
-    //     setData([]);
-    //   }
-    // }, [search]);
+      if (search.trim() !== '') {
+        fetchData();
+      } else {
+        setData([]);
+      }
+    }, [search]);
   
     return(
         <>
@@ -141,10 +141,10 @@ import {Link} from "react-router-dom";
         
 
         {/* the fetch cards */}
-{/* 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"> */}
+ 
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"> 
           {/* shopping card */}
-          {/* {data
+           {data
               .filter((item)=>{
                 return search.toLowerCase() ==='' ? item
                 : item.type.toLowerCase().includes(search);
@@ -164,8 +164,8 @@ import {Link} from "react-router-dom";
               </div>
               </div>
                 
-  ))} */}
-  {/* </div> */}
+  ))} 
+  </div> 
 
   
     </>

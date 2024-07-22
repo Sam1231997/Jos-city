@@ -9,37 +9,37 @@ import Footer from '../components/Footer';
 // import useFetch from '../components/useFetch';
 
 const Shopping =()=>{
-    // const [filter, setFilter] = useState('All');
-    // const [events, setEvents] = useState([]);
-    // const [loading, setLoading] = useState(true);
-    // const [error, setError] = useState(null);
+    const [filter, setFilter] = useState('All');
+    const [events, setEvents] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
   
     // // Fetch data from API
-    // useEffect(() => {
-    //   const fetchData = async () => {
-    //     try {
-    //       const response = await fetch('http://localhost:7000/dbdata');
-    //       const result = await response.json();
-    //       setEvents(result);
-    //       setLoading(false);
-    //     } catch (error) {
-    //       setError(error);
-    //       setLoading(false);
-    //     }
-    //   };
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch('http://localhost:7000/dbdata');
+          const result = await response.json();
+          setEvents(result);
+          setLoading(false);
+        } catch (error) {
+          setError(error);
+          setLoading(false);
+        }
+      };
   
-    //   fetchData();
-    // }, []);
+      fetchData();
+    }, []);
   
-    // if (loading) {
-    //   return <div>Loading...</div>;
-    // }
+    if (loading) {
+      return  <p className='text-green-800 bold'>Loading................................</p>
+    }
   
-    // if (error) {
-    //   return <div>Error: {error.message}</div>;
-    // }
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    }
   
-    // const filteredEvents = filter === 'All' ? events.slice(17,27) : events.filter(event => event.type === filter);
+    const filteredEvents = filter === 'All' ? events.slice(17,27) : events.filter(event => event.type === filter);
     
     return(
         <div>
@@ -64,11 +64,11 @@ const Shopping =()=>{
 
     </div>
     </div>
-    <p className='text-green-800 bold'>Loading................................</p>
+   
 {/* BACKEND SIDE */}
 {/* fetch cards */}
 
-    {/* <div className="p-4">
+    <div className="p-4">
       <div className="flex space-x-4 mb-4">
         {['All', 'Markets', 'Shopping Malls'].map(type => (
           <button
@@ -96,7 +96,7 @@ const Shopping =()=>{
           </div>
         ))}
         </div>
-      </div> */}
+      </div>
     </div>
 
        <Footer/>

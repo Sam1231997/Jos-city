@@ -70,7 +70,7 @@
     "type": "Hotels",
    "date": "25th July to 5th August 2024",
    "address": "26 Martin Luther street, beside rayfield golf club, Jos",
-   "address1": "https://maps.app.goo.gl/R63oNRWauHrJdyuq6",
+   "link": "https://maps.app.goo.gl/R63oNRWauHrJdyuq6",
    "image1":"/images/point1.png",
     "id": 8
 },
@@ -209,7 +209,7 @@
    "date": "25th July to 5th August 2024",
    "address": "6 sylvester Dabo close, Appollo Cress, South Plateau State5",
    "image1":"/images/Terminus.png",
-   "address1":"https://maps.app.goo.gl/R63oNRWauHrJdyuq6",
+   "link":"https://maps.app.goo.gl/R63oNRWauHrJdyuq6",
     "id": 26
 },
 {
