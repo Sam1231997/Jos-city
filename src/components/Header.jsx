@@ -77,7 +77,7 @@ import axios from 'axios';
               <Link to='/accomodation' className="text-black hover:text-green-600">Accomodations</Link>
               </div>
               <div className="relative group">
-              <Link to='/restaurant' className="text-black hover:text-green-600">Restaurants</Link>
+              <Link to='/restaurant' className="text-black hover:text-green-600">Restaraurants</Link>
               </div>
               <div className="relative group">
               <Link to='/shopping' className="text-black hover:text-green-600">Shopping</Link>
@@ -89,31 +89,63 @@ import axios from 'axios';
             </div>
           </div>
           {/* <!-- Search Bar --> */}
-          <form onChange={(e) => setSearch(e.target.value)} >
-            <div className="relative">
+          <div className='hidden lg:flex '>
+      <form onChange={(e) => setSearch(e.target.value)} >
+            <div className=" ">
               <input
                 type="text"
                 placeholder="Search"
-                className="px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-green-600"
+                className="px-4 py-2 border border-gray-300 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-green-600 "
                
               />
              
               </div>
            
-          </form>
+            </form>
+    </div>
+    
         </nav>
         {/* <!-- Mobile Menu --> */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="flex flex-col space-y-2 p-4">
-              <a href="#" className="text-black hover:text-green-600">Now in Jos</a>
-              <a href="#" className="text-black hover:text-green-800">Accomodations</a>
-              <a href="#" className="text-black hover:text-green-600">Restaurants</a>
-              <a href="#" className="text-black hover:text-green-600">Shopping</a>
-              <a href="#" className="text-black hover:text-green-600">Attractions</a>
+        {isMenuOpen===true? (
+          <div className="md:hidden flex justify-between p-10">
+            {/* <nav className='h-[8rem]'></nav> */}
+            <div className=''>
+              
+            <div className="relative-group">
+                <Link to='/nowij' className="text-black hover:text-green-600">Now In Jos</Link>
+              </div>
+              <div className="relative-group">
+              <Link to='/accomodation' className="text-black hover:text-green-600">Accomodation</Link>
+              </div>
+              <div className="relative-group">
+              <Link to='/restaurant' className="text-black hover:text-green-600">Restaurants</Link>
+              </div>
+              <div className="relative-group">
+              <Link to='/shopping' className="text-black hover:text-green-600">Shopping</Link>
+              </div>
+              <div className="relative-group">
+              <Link to='/attractions' className="text-black hover:text-green-600">Attractions</Link>
+              </div>
             </div>
-          </div>
-        )}   
+            <div >
+      <form onChange={(e) => setSearch(e.target.value)} >
+            <div className=" ">
+              <input
+                type="text"
+                placeholder="Search"
+                className="px-4 py-2 border border-gray-300 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-green-600 "
+               
+              />
+             
+              </div>
+           
+            </form>
+    </div>
+    </div>
+    ): null}
+    <div className={`searchQuery overflow-y-auto bg-black bg-opacity-[.5/1] ${search && 'pt-[8rem] p-40'} `}>
+        
+        </div>
         
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {/* shopping card */}
