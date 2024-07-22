@@ -41,7 +41,7 @@ import {Link} from "react-router-dom";
     return(
         <>
   
-       <nav className='flex justify-between lg:justify-evenly items-center p-5 font-poppins bg-white border-b border-gray-200 fixed top-0 left-0 right-0 z-50'>
+       <nav className='flex justify-between lg:justify-evenly items-center p-5 font-poppins '>
           
             
           <div>
@@ -141,8 +141,8 @@ import {Link} from "react-router-dom";
         
 
         {/* the fetch cards */}
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+{/* 
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"> */}
           {/* shopping card */}
           {/* {data
               .filter((item)=>{
@@ -165,7 +165,7 @@ import {Link} from "react-router-dom";
               </div>
                 
   ))} */}
-  </div>
+  {/* </div> */}
 
   
     </>
