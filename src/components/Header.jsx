@@ -23,7 +23,7 @@ import {Link} from "react-router-dom";
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await axios.get(`http://localhost:7000/dbdata`);
+          const response = await axios.get(`http://192.168.43.224:5173/dbdata`);
           setData(response.data); // Assuming your API returns an array of items
         console.log(response.data);
         } catch (error) {

@@ -11,7 +11,7 @@
   "scripts": {
   
     
-  "start:api": "json-server --watch data/db.json --port 7000",
+  "start": "json-server --watch data/db.json --port 7000",
   
     
   "dev": "vite",
