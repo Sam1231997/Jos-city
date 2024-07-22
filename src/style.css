@@ -21,7 +21,7 @@
     position: fixed;
     top: 50px; /* Adjust this value if needed to align with your hamburger button */
     left: 0;
-    width: 70%;
+    width: 100%;
     height: calc(100% - 50px); /* Adjust this value based on the height of your hamburger button */
     background-color:white;
     z-index: 50;
