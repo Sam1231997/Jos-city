@@ -64,7 +64,7 @@ const Shopping =()=>{
 
     </div>
     </div>
- 
+    <p className='text-green-800 bold'>Loading................................</p>
 {/* BACKEND SIDE */}
 {/* fetch cards */}
 

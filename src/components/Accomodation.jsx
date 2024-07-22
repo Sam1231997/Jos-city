@@ -63,7 +63,7 @@ const Accomodation=()=>{
 
     </div>
     </div>
- 
+    <p className='text-green-800 bold'>Loading................................</p>
 {/* BACKEND SIDE */}
     {/* <div className="p-4">
       <div className="flex space-x-4 mb-4">
