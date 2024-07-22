@@ -3,7 +3,7 @@ const Footer =()=>{
         <footer className="bg-black text-white py-8 px-4">
     <div className="container mx-auto flex flex-col lg:flex-row justify-between gap-[2rem] items-center min-h-[5rem]">
         <div>
-            <img src="/images/JCITY LOGO 1.png" alt="j-city logo" className="w-[5rem] h-[6rem] lg:w-[8rem] lg:h-[9rem] "/>
+            <img src="/images/logo.png" alt="j-city logo" className="w-[5rem] h-[6rem] lg:w-[8rem] lg:h-[9rem] "/>
         </div>
         <div>
             <h3 className="text-[1rem] lg:text-xl font-medium text-green-600">J CITY TOUR GUIDE</h3>
