@@ -11,37 +11,37 @@ import Footer from './Footer';
 
 // import AfterRes from "./AfterRes"
 const Attraction=()=>{
-    const [filter, setFilter] = useState('All');
-    const [events, setEvents] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    // const [filter, setFilter] = useState('All');
+    // const [events, setEvents] = useState([]);
+    // const [loading, setLoading] = useState(true);
+    // const [error, setError] = useState(null);
   
     // Fetch data from API
-    useEffect(() => {
-      const fetchData = async () => {
-        try {
-          const response = await fetch('http://localhost:7000/dbdata');
-          const result = await response.json();
-          setEvents(result);
-          setLoading(false);
-        } catch (error) {
-          setError(error);
-          setLoading(false);
-        }
-      };
+    // useEffect(() => {
+    //   const fetchData = async () => {
+    //     try {
+    //       const response = await fetch('http://localhost:7000/dbdata');
+    //       const result = await response.json();
+    //       setEvents(result);
+    //       setLoading(false);
+    //     } catch (error) {
+    //       setError(error);
+    //       setLoading(false);
+    //     }
+    //   };
   
-      fetchData();
-    }, []);
+    //   fetchData();
+    // }, []);
   
-    if (loading) {
-      return <div>Loading...</div>;
-    }
+    // if (loading) {
+    //   return <div>Loading...</div>;
+    // }
   
-    if (error) {
-      return <div>Error: {error.message}</div>;
-    }
+    // if (error) {
+    //   return <div>Error: {error.message}</div>;
+    // }
   
-    const filteredEvents = filter === 'All' ? events : events.filter(event => event.type === filter);
+    // const filteredEvents = filter === 'All' ? events : events.filter(event => event.type === filter);
     
     return(
         <div>
@@ -69,7 +69,7 @@ const Attraction=()=>{
     </div>
  
 {/* BACKEND SIDE */}
-    <div className="p-4">
+    {/* <div className="p-4">
       <div className="flex space-x-4 mb-4">
         {['All', 'Museums','Amusement Parks', 'Water Fall', 'Mountains'].map(type => (
           <button
@@ -97,7 +97,7 @@ const Attraction=()=>{
           </div>
         ))}
         </div>
-      </div>
+      </div> */}
     </div>
 
       <Footer/>
