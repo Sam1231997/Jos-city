@@ -1,11 +1,11 @@
 
-import {useState,useEffect} from 'react'
+import {useState} from 'react'
   // import { data } from './Data';
   // import Filter from './Filter';
 //   import Search from "./Search";
 
 import {Link} from "react-router-dom";
-import axios from 'axios';
+// import axios from 'axios';
   const Header =()=> {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [search, setSearch] = useState('');
@@ -147,6 +147,9 @@ import axios from 'axios';
         
         </div>
         
+
+        {/* the fetch cards */}
+
       {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"> */}
           {/* shopping card */}
           {/* {data
