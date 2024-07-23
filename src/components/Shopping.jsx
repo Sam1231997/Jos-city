@@ -8,7 +8,6 @@ import Footer from '../components/Footer';
 // import Dbcards from '../components/Dbcards';
 // import Aftershop from '../components/Aftershop';
 // import useFetch from '../components/useFetch';
-import axios from 'axios';
 
 const Shopping =()=>{
   const [filter, setFilter] = useState('All');
@@ -40,7 +39,6 @@ const Shopping =()=>{
     if (error) {
       return <div>Error: {error.message}</div>;
     }
-  
     const filteredEvents = filter === 'All' ? events.slice(25,28) : events.filter(event => event.type === filter);
     
     return(

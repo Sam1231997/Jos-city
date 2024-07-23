@@ -12,36 +12,35 @@ import Footer from './Footer';
 // import AfterRes from "./AfterRes"
 import axios from 'axios';
 const Attraction=()=>{
-    const [filter, setFilter] = useState('All');
-    const [events, setEvents] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-  
-    // Fetch data from API
-    useEffect(() => {
-      const fetchData = async () => {
-        try {
-          const response = await fetch('https://jos-city-1wfq.vercel.app/attraction');
-          const result = await response.json();
-          setEvents(result);
-          setLoading(false);
-        } catch (error) {
-          setError(error);
-          setLoading(false);
-        }
-      };
-  
-      fetchData();
-    }, []);
-  
-    if (loading) {
-      return <div>Loading...</div>;
-    }
-  
-    if (error) {
-      return <div>Error: {error.message}</div>;
-    }
-  
+  const [filter, setFilter] = useState('All');
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Fetch data from API
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:7000/dbdata');
+        const result = await response.json();
+        setEvents(result);
+        setLoading(false);
+      } catch (error) {
+        setError(error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
     const filteredEvents = filter === 'All' ? events : events.filter(event => event.type === filter);
     
     return(
