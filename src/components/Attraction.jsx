@@ -20,7 +20,7 @@ const Attraction=()=>{
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await fetch('http://localhost:7000/dbdata');
+          const response = await fetch('https://jos-city-1wfq.vercel.app/attraction');
           const result = await response.json();
           setEvents(result);
           setLoading(false);
