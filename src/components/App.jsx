@@ -10,7 +10,7 @@ import React from "react";
 // import Footer from "./Footer";
 // import Search from "./Header";
 // import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import NowIJ from "./NowIJ";
 import Accomodation from "./Accomodation";
@@ -29,21 +29,8 @@ import Footer from "./Footer";
 
 const App = () => {
   return(
-    <BrowserRouter>
-    <Header/>
-
-  <Routes>
-    
-    <Route path="/" element={<Landing />}/>
-     <Route path="/see" element ={<Seeall/>}/>
-    <Route path="/nowij" element={<NowIJ />} />
-    <Route path="/shopping" element={<Shopping/>} />
-    <Route path="/attraction" element={<Attraction/>} />
-    <Route path="/accomodation" element={<Accomodation/>} />
-    <Route path="/restaurant" element={<Restaurant/>} /> 
-  </Routes>
-
-</BrowserRouter>
+   <NowIJ/>
+   
   )
   
 }

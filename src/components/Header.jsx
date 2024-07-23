@@ -17,13 +17,13 @@ import {Link} from "react-router-dom";
       setIsMenuOpen(false);
     };
     const [search, setSearch] = useState('');
-    
+    const [filter, setFilter] = useState('All');
     const [data, setData] = useState([]);
   
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await axios.get(`http://192.168.43.224:5173/dbdata`);
+          const response = await axios.get(`http://localhost:7000/dbdata`);
           setData(response.data); // Assuming your API returns an array of items
         console.log(response.data);
         } catch (error) {

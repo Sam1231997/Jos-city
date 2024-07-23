@@ -39,6 +39,7 @@ const Restaurant=()=>{
   
     if (error) {
       return <div>Error: {error.message}</div>;
+ 
     }
   
     const filteredEvents = filter === 'All' ? events.slice(0,4) : events.filter(event => event.type === filter);

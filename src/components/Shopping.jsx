@@ -18,9 +18,10 @@ const Shopping =()=>{
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await fetch('http://localhost:7000/dbdata');
+          const response = await fetch('http:localhost:7000/dbdata');
           const result = await response.json();
           setEvents(result);
+          console.log(result);
           setLoading(false);
         } catch (error) {
           setError(error);
