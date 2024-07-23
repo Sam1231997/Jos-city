@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react'
 // import {cards} from './Cards'
 // import Navbar from './Navbar';
 import Footer from './Footer';
+import axios from 'axios';
 // import Afternav from './Afternav';
 // import Dbcards from './Dbcards';
 

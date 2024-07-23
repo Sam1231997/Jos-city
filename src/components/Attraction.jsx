@@ -10,6 +10,7 @@ import Footer from './Footer';
 // import useFetch from './useFetch';
 
 // import AfterRes from "./AfterRes"
+import axios from 'axios';
 const Attraction=()=>{
     const [filter, setFilter] = useState('All');
     const [events, setEvents] = useState([]);

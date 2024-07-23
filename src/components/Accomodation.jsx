@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 // import Dbcards from '../components/Dbcards';
 // import AfterAtt from '../components/AfterAtt';
 // import useFetch from '../components/useFetch';
+import axios from 'axios';
 
 const Accomodation=()=>{
     const [filter, setFilter] = useState('All');

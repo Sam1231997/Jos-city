@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 // import Dbcards from '../components/Dbcards';
 // import Aftershop from '../components/Aftershop';
 // import useFetch from '../components/useFetch';
+import axios from 'axios';
 
 const Shopping =()=>{
   const [filter, setFilter] = useState('All');
