@@ -89,7 +89,7 @@ const Attraction=()=>{
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
         {filteredEvents.map(event => (
           <div key={event.id} className="bg-gray-100 border border-gray-200 rounded-lg overflow-hidden">
-            <img src={event.image1} alt={event.title} className="w-full min-h-48 object-cover lg:p-4" />
+            <img src={event.image1} alt="picture" className="w-full min-h-48 object-cover lg:p-4" />
             <div className="p-4">
               <h3 className="text-[1rem] lg:text-xl font-bold text-gray-800 pb-2">{event.title}</h3>
               <p className="text-[.75rem] lg:text-[1rem] text-gray-600 pb-1">{event.address}</p>

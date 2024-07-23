@@ -30,7 +30,7 @@ const Footer =()=>{
             </div>
         </div>
     </div>
-    <div class="text-center text-[.9rem] pt-[1rem] lg:float-right">
+    <div className="text-center text-[.9rem] pt-[1rem] lg:float-right">
         <p>© 2024 J City Tour Guide. All rights reserved.</p>
     </div>
 </footer>

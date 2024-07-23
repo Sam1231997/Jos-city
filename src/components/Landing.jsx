@@ -7,37 +7,37 @@ import Footer from './Footer';
 import { Link } from 'react-router-dom';
 
 const Landing =()=>{
-    const [filter, setFilter] = useState('All');
-    const [events, setEvents] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    // const [filter, setFilter] = useState('All');
+    // const [events, setEvents] = useState([]);
+    // const [loading, setLoading] = useState(true);
+    // const [error, setError] = useState(null);
   
     // // Fetch data from API
-    useEffect(() => {
-      const fetchData = async () => {
-        try {
-          const response = await fetch('http://localhost:7000/dbdata');
-          const result = await response.json();
-          setEvents(result);
-          setLoading(false);
-        } catch (error) {
-          setError(error);
-          setLoading(false);
-        }
-      };
+    // useEffect(() => {
+    //   const fetchData = async () => {
+    //     try {
+    //       const response = await fetch('http://localhost:7000/dbdata');
+    //       const result = await response.json();
+    //       setEvents(result);
+    //       setLoading(false);
+    //     } catch (error) {
+    //       setError(error);
+    //       setLoading(false);
+    //     }
+    //   };
   
-      fetchData();
-    }, []);
+    //   fetchData();
+    // }, []);
   
-    if (loading) {
-      return <div>Loading...</div>;
-    }
+    // if (loading) {
+    //   return <div>Loading...</div>;
+    // }
   
-    if (error) {
-      return <div>BE PATIENT WE WILL GET BACK TO YOU SOON</div>;
-    }
+    // if (error) {
+    //   return <div>BE PATIENT WE WILL GET BACK TO YOU SOON</div>;
+    // }
   
-    const filteredEvents = filter === 'All' ? events.slice(0, 4)  : events.filter(event => event.type === filter);
+    // const filteredEvents = filter === 'All' ? events.slice(0, 4)  : events.filter(event => event.type === filter);
     
     
     return(
@@ -62,7 +62,7 @@ const Landing =()=>{
 
     <section className="py-12  px-[1rem]">
         <div className="container mx-auto">
-            <div class="flex lg:flex-row flex-col items-center gap-6 min-h-[20%]">
+            <div className="flex lg:flex-row flex-col items-center gap-6 min-h-[20%]">
                     <img src="/images/Frame 43 (1).png" alt="Rayfield Resort" className="rounded-lg shadow-md overflow-hidden w-[100%] h-[100%] object-cover"/>
                     <img src="/images/Frame 46.png " alt="Asop Water Falls" className="rounded-lg shadow-md overflow-hidden w-[100%] h-[100%] object-cover"/>
                     <img src="/images/Frame 45.png" alt="Play Station" className="rounded-lg shadow-md overflow-hidden w-[100%] h-[100%] object-cover"/>
