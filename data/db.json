@@ -4,6 +4,7 @@
 
 {
     "dbdata":[
+      
 {
     "title": "Networking",
     "type": "Networking",
@@ -70,7 +71,7 @@
     "type": "Hotels",
    "date": "25th July to 5th August 2024",
    "address": "26 Martin Luther street, beside rayfield golf club, Jos",
-   "link": "https://maps.app.goo.gl/R63oNRWauHrJdyuq6",
+
    "image1":"/images/point1.png",
     "id": 8
 },
@@ -209,7 +210,7 @@
    "date": "25th July to 5th August 2024",
    "address": "6 sylvester Dabo close, Appollo Cress, South Plateau State5",
    "image1":"/images/Terminus.png",
-   "link":"https://maps.app.goo.gl/R63oNRWauHrJdyuq6",
+  
     "id": 25
 },
 {
@@ -300,6 +301,69 @@
    "address": "6 sylvester Dabo close, Appollo Cress, South Plateau State5",
    "image1":"/images/fall1.png",
     "id": 36
+},
+{
+    "title": "Designers Meetup",
+    "type": "All",
+   "date": "25th July 2024",
+   "address": "Suit 70 Marinjo House Juction, Jos",
+   "image1":"/images/c1.png",
+   
+    "id": 37
+},
+{
+    "title": "Designers Meetup",
+    "type": "All",
+   "date": "25th July 2024",
+   "address": "Suit 70 Marinjo House Juction, Jos",
+   "image1":"/images/c1.png",
+   
+    "id": 38
+},
+{
+    "title": "The evidence is clear",
+    "type": "All",
+   "date": "26th June2024",
+   "address": "www.google.com.wwb.org",
+   "image1":"/images/c2.png",
+   
+    "id": 39
+},
+{
+    "title": "Config: Watch Party",
+    "type": "All",
+   "date": "25th July 2024",
+   "address": "Ignite Launge 6738 Shaka Rd, Jos",
+   "image1":"/images/c3.png",
+   
+    "id": 40
+},
+{
+    "title": "Free AI Classes: Every city",
+    "type": "All",
+   "date": "June -September 2024",
+   "address": "6 Sylvester Dabo Close, Jos",
+   "image1":"/images/c4.png",
+   
+    "id": 41
+},
+{
+    "title": "SDGS Advocate Programme",
+    "type": "All",
+   "date": "27th April 2024",
+   "address": "Google Meet",
+   "image1":"/images/c5.png",
+   
+    "id": 42
+},
+{
+    "title": "LOPTP: Friendly Match",
+    "type": "All",
+   "date": "10th July 2024",
+   "address": "Kruise yard, Rayfield, Jos",
+   "image1":"/images/c1.png",
+   
+    "id":43 
 }
 
     ]    

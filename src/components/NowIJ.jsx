@@ -2,7 +2,8 @@
 import {useState, useEffect} from 'react'
 // import {cards} from './Cards'
 // import Navbar from './Navbar';
-import { Object } from '../../Object';
+// import { Object } from '../../Object';
+import { Link } from 'react-router-dom';
 import Footer from './Footer';
 
 // import useFetch from './useFetch';
@@ -11,36 +12,36 @@ const NowIJ =()=>{
     
    
     const [filter, setFilter] = useState('All');
-    // const [events, setEvents] = useState([]);
-    // const [loading, setLoading] = useState(true);
-    // const [error, setError] = useState(null);
+    const [events, setEvents] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
   
     // Fetch data from API
-    // useEffect(() => {
-    //   const fetchData = async () => {
-    //     try {
-    //       const response = await fetch('http://localhost:7000/dbdata');
-    //       const result = await response.json();
-    //       setEvents(result);
-    //       setLoading(false);
-    //     } catch (error) {
-    //       setError(error);
-    //       setLoading(false);
-    //     }
-    //   };
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch('http://localhost:7000/dbdata');
+          const result = await response.json();
+          setEvents(result);
+          setLoading(false);
+        } catch (error) {
+          setError(error);
+          setLoading(false);
+        }
+      };
   
-    //   fetchData();
-    // }, []);
+      fetchData();
+    }, []);
   
-    // if (loading) {
-    //   return <div>Loading...</div>;
-    // }
+    if (loading) {
+      return <div>Loading...</div>;
+    }
   
-    // if (error) {
-    //   return <div>Error: {error.message}</div>;
-    // }
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    }
   
-    const filteredEvents = filter === 'All' ? Object.slice(0, 5)  : Object.filter(event => event.type === filter);
+    const filteredEvents = filter === 'All' ? events.slice(38, 43)  : events.filter(event => event.type === filter);
     
     
     return(
@@ -93,7 +94,7 @@ const NowIJ =()=>{
               <p className="text-[.75rem] lg:text-[1rem] text-gray-600 pb-1">{event.address}</p>
               <p className="text-[.75rem] lg:text-[1rem] text-gray-600">{event.date}</p>
               <div className="flex items-center justify-between mt-4">
-                <a href="details.html" className="bg-green-200 text-green-600 px-2 py-[.4rem] lg:px-4 lg:py-2 rounded-lg hover:text-green-700 text-[.75rem] lg:text-[1rem]">More Info</a>
+                <Link to="/details" className="bg-green-200 text-green-600 px-2 py-[.4rem] lg:px-4 lg:py-2 rounded-lg hover:text-green-700 text-[.75rem] lg:text-[1rem]">More Info</Link>
                 <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.address)}`} className="bg-green-700 text-white px-2 py-[.4rem] lg:px-4 lg:py-2 rounded-lg text-[.75rem] lg:text-[1rem]">Get Directions</a>
               </div>
             </div>

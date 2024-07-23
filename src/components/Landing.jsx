@@ -7,38 +7,7 @@ import Footer from './Footer';
 import { Link } from 'react-router-dom';
 
 const Landing =()=>{
-    const [filter, setFilter] = useState('All');
-    const [events, setEvents] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-  
-    // // Fetch data from API
-    useEffect(() => {
-      const fetchData = async () => {
-        try {
-          const response = await fetch('http://localhost:7000/dbdata');
-          const result = await response.json();
-          setEvents(result);
-          setLoading(false);
-        } catch (error) {
-          setError(error);
-          setLoading(false);
-        }
-      };
-  
-      fetchData();
-    }, []);
-  
-    if (loading) {
-      return <div>Loading...</div>;
-    }
-  
-    if (error) {
-      return <div>BE PATIENT WE WILL GET BACK TO YOU SOON</div>;
-    }
-  
-    const filteredEvents = filter === 'All' ? events.slice(0, 4)  : events.filter(event => event.type === filter);
-    
+   
     
     return(
         <>
