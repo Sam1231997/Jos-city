@@ -17,7 +17,7 @@ const Accomodation=()=>{
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://jos-city-1wfq.vercel.app');
+        const response = await fetch('http://localhost:7000/dbdata');
         const result = await response.json();
         setEvents(result);
         setLoading(false);
