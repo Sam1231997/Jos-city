@@ -23,7 +23,7 @@ import {Link} from "react-router-dom";
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await axios.get(`http://localhost:7000/dbdata`);
+          const response = await axios.get(`https://jos-city-1wfq.vercel.app`);
           setData(response.data); // Assuming your API returns an array of items
         console.log(response.data);
         } catch (error) {
