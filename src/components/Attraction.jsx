@@ -41,7 +41,7 @@ const Attraction=()=>{
   if (error) {
     return <div>Error: {error.message}</div>;
   }
-    const filteredEvents = filter === 'All' ? events : events.filter(event => event.type === filter);
+    const filteredEvents = filter === 'All' ? events.slice(28,36) : events.filter(event => event.type === filter);
     
     return(
       

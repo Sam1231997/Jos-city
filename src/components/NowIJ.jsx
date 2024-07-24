@@ -6,6 +6,7 @@ import {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import axios from 'axios';
+import Dropdown from './Dropdown';
 
 // import useFetch from './useFetch';
 
@@ -61,8 +62,8 @@ const NowIJ =()=>{
 <div className="container mx-auto px-4 py-12">
     <div className="flex justify-between flex-col lg:flex-row">
         <div className="flex items-center gap-1">
-            <h2 className="lg:text-[1.8rem] text-xl font-bold lg:font-semibold">CURRENT EVENTS</h2>
-            <img src="/images/arrow.png" className="h-2 w-3 mt-2"/>
+            <h4 className="lg:text-[1.8rem] text-l font-bold lg:font-semibold">CURRENT EVENTS</h4>
+            <Dropdown/>
         </div>
         
     </div>
@@ -78,7 +79,7 @@ const NowIJ =()=>{
       key={type}
       onClick={() => setFilter(type)}
       className={`px-4 py-2 mb-2 w-full sm:w-auto rounded-lg ${
-        filter === type ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-800'
+        filter === type ? 'bg-green-500 text-white' : 'bg-white outline-green-500'
       }`}
     >
       {type}
@@ -88,7 +89,7 @@ const NowIJ =()=>{
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
         {filteredEvents.map(event => (
-          <div key={event.id} className="bg-gray-100 border border-gray-200 rounded-lg overflow-hidden">
+          <div key={event.id} className="rounded-lg overflow-hidden">
             <img src={event.image1} alt={event.title} className="w-full min-h-48 object-cover lg:p-4" />
             <div className="p-4">
               <h3 className="text-[1rem] lg:text-xl font-bold text-gray-800 pb-2">{event.title}</h3>

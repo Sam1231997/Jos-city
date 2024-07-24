@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const Dropdown = () => {
+const Dropdown2 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -23,7 +23,7 @@ const Dropdown = () => {
   }, []);
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="relative " ref={dropdownRef}>
       <button
         onClick={toggleDropdown}
         
@@ -31,9 +31,10 @@ const Dropdown = () => {
        <img src="/images/arrow.png" className="h-2 w-3 mt-2" />
       </button>
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg">
-          <Link to="/nowij" className="block px-4 py-2 text-green-800 hover:bg-gray-100">Current</Link>
-          <Link to="/upcoming" className="block px-4 py-2 text-green-800 hover:bg-gray-100">Upcoming</Link>
+        <div className="absolute right-0 mt-2 w-35 bg-white border border-gray-200 rounded shadow-lg">
+          <Link to="/accomodation" className="block px-4 py-2 text-green-800 hover:bg-gray-100">Hotels</Link>
+          <Link to="/hospital" className="block px-4 py-2 text-green-800 hover:bg-gray-100">Hospitals</Link>
+          <Link to="/appartment" className="block px-4 py-2 text-green-800 hover:bg-gray-100">Appartments</Link>
          
         </div>
       )}
@@ -41,4 +42,4 @@ const Dropdown = () => {
   );
 };
 
-export default Dropdown;
+export default Dropdown2;

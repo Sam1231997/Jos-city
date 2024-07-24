@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 // import AfterAtt from '../components/AfterAtt';
 // import useFetch from '../components/useFetch';
 import axios from 'axios';
+import Dropdown2 from './Dropdown2';
 
 const Accomodation=()=>{
     const [filter, setFilter] = useState('All');
@@ -39,7 +40,7 @@ const Accomodation=()=>{
     return <div>Error: {error.message}</div>;
   }
 
-  const filteredEvents = filter === 'All' ? events.slice(7,12): events.filter(event => event.type === filter);
+  const filteredEvents = filter === 'All' ? events.slice(6,12): events.filter(event => event.type === filter);
     return (
         <div>
         <div>
@@ -56,8 +57,8 @@ const Accomodation=()=>{
 <div className="container mx-auto px-4 py-12">
     <div className="flex justify-between flex-col lg:flex-row">
         <div className="flex items-center gap-1">
-            <h2 className="lg:text-[1.8rem] text-xl font-bold lg:font-semibold">ACCOMODATIONS</h2>
-            <img src="/images/arrow.png" className="h-2 w-3 mt-2"/>
+            <h2 className="lg:text-[1.8rem] text-xl font-bold lg:font-semibold ">HOTELS</h2>
+            <Dropdown2/>
         </div>
         
     </div>
@@ -68,7 +69,7 @@ const Accomodation=()=>{
 {/* BACKEND SIDE */}
     <div className="p-4">
       <div className="flex space-x-4 mb-4">
-        {['All',  'Hotels', 'Appartments','Hospitals'].map(type => (
+        {['All',  '4+ Rating', 'Price','Amenities','Property type','Parties'].map(type => (
           <button
             key={type}
             onClick={() => setFilter(type)}

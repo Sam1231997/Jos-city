@@ -60,7 +60,7 @@
 },
 {
     "title": "Valada Hotel and Resort Ltd",
-    "type": "Hotels",
+    "type": "4+ Rating",
    "date": "25th July to 5th August 2024",
    "address": "6 sylvester Dabo close, Appollo Cress, South Plateau State5",
    "image1":"/images/valada1.png",
@@ -218,7 +218,7 @@
     "type": "Markets",
    "date": "25th July to 5th August 2024",
    "address": "6 sylvester Dabo close, Appollo Cress, South Plateau State5",
-   "image1":"/images/november.png",
+   "image1":"/images/a2.png",
     "id": 26
 },
 {
@@ -226,7 +226,7 @@
     "type": "Markets",
    "date": "25th July to 5th August 2024",
    "address": "6 sylvester Dabo close, Appollo Cress, South Plateau State5",
-   "image1":"/images/apart2.png",
+   "image1":"/images/a1.png",
     "id": 27
 },
 {
@@ -234,7 +234,7 @@
     "type": "Markets",
    "date": "25th July to 5th August 2024",
    "address": "6 sylvester Dabo close, Appollo Cress, South Plateau State5",
-   "image1":"/images/dalsy.png",
+   "image1":"/images/a3.png",
     "id": 28
 },
 {
@@ -357,14 +357,45 @@
     "id": 42
 },
 {
-    "title": "LOPTP: Friendly Match",
+    "title": "Orange Festival",
     "type": "All",
-   "date": "10th July 2024",
-   "address": "Kruise yard, Rayfield, Jos, plateau",
-   "image1":"/images/c1.png",
+   "date": "Coming Soon",
+   "address": "To be Announced",
+   "image1":"/images/u1.png",
    
-    "id":43 
+    "id":43
+},
+{
+    "title": "The dwelling Place",
+    "type": "All",
+   "date": "29th August -3rd September 2023",
+   "address": "Laming, Rayfield, Plateau State",
+   "image1":"/images/u2.png",
+   
+    "id":44 
+},
+
+{
+    "title": "Arduno Meetup",
+    "type": "All",
+   "date": "27th July 2024",
+   "address": "Nasco Marketing Company, Jos",
+   "image1":"/images/u3.png",
+   
+    "id":45 
+},
+
+{
+    "title": "Tech Meetup",
+    "type": "All",
+   "date": "16th-18th August 2024",
+   "address": "Rayfield Plateau Jos",
+   "image1":"/images/u4.png",
+   
+    "id":46 
 }
+
+
 
     ]    
 

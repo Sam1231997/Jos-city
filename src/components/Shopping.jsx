@@ -39,7 +39,7 @@ const Shopping =()=>{
     if (error) {
       return <div>Error: {error.message}</div>;
     }
-    const filteredEvents = filter === 'All' ? events.slice(25,28) : events.filter(event => event.type === filter);
+    const filteredEvents = filter === 'All' ? events.slice(24,28) : events.filter(event => event.type === filter);
     
     return(
         <div>
@@ -56,8 +56,8 @@ const Shopping =()=>{
 <div className="container mx-auto px-4 py-12">
     <div className="flex justify-between flex-col lg:flex-row">
         <div className="flex items-center gap-1">
-            <h2 className="lg:text-[1.8rem] text-xl font-bold lg:font-semibold">SHOPPING</h2>
-            <img src="/images/arrow.png" className="h-2 w-3 mt-2"/>
+            <h2 className="lg:text-[1.8rem] text-xl font-bold lg:font-semibold">SHOPPINGS</h2>
+            
         </div>
         
     </div>
