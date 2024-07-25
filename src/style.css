@@ -46,7 +46,7 @@
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 100;
+    z-index: 1000;
     transition: opacity 0.3s ease-in-out;
   }
   
@@ -54,4 +54,23 @@
     opacity: 0;
     pointer-events: none;
   }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* Adjust background color as needed */
+    z-index: 1000; /* Ensure the header stays above other content */
+  }
   
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px; /* Adjust padding as needed */
+    border-bottom: 1px solid #ddd; /* Optional: adds a border below the header */
+  }
+  
+  .content {
+    margin-top: 130px; /* Adjust based on header height to prevent content from hiding behind header */
+  }
