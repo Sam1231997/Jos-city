@@ -6,7 +6,7 @@ import "../style.css"
 //   import Search from "./Search";
 
 import {Link} from "react-router-dom";
-// import axios from 'axios';
+import axios from 'axios';
   const Header =()=> {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => {
