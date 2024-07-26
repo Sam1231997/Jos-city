@@ -89,7 +89,7 @@ const Accomodation=()=>{
               <p className="text-[.75rem] lg:text-[1rem] text-gray-600">{event.date}</p>
               <div className="flex items-center justify-between mt-4">
                 <a href="details.html" className="bg-green-200 text-green-600 px-2 py-[.4rem] lg:px-4 lg:py-2 rounded-lg hover:text-green-700 text-[.75rem] lg:text-[1rem]">More Info</a>
-                <a href="#" className="bg-green-700 text-white px-2 py-[.4rem] lg:px-4 lg:py-2 rounded-lg text-[.75rem] lg:text-[1rem]">Get Directions</a>
+                <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.address)}`} className="bg-green-700 text-white px-2 py-[.4rem] lg:px-4 lg:py-2 rounded-lg text-[.75rem] lg:text-[1rem]">Get Directions</a>
               </div>
             </div>
           </div>

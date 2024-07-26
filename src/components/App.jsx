@@ -24,8 +24,9 @@ import Details from "./detail";
 import Upcoming from "./Upcoming";
 import Hospital from "./Hospital";
 import Appartment from "./Appartment";
+import Page from "./Page";
 import Footer from "./Footer";
-import Header2 from "../Header2";
+// import Header2 from "../Header2";
 // import Nav from "./Nav";
 
 
@@ -35,11 +36,11 @@ import Header2 from "../Header2";
 const App = () => {
   return(
     <BrowserRouter>
-    <Header2/>
+    <Header/>
 
   <Routes>
     
-    <Route path="/" element={<Landing />}/>
+    <Route path="/" element={<Landing/>}/>
      <Route path="/see" element ={<Seeall/>}/>
     <Route path="/nowij" element={<NowIJ />} />
     <Route path="/shopping" element={<Shopping/>} />

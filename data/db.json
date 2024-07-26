@@ -62,7 +62,7 @@
     "title": "Valada Hotel and Resort Ltd",
     "type": "4+ Rating",
    "date": "25th July to 5th August 2024",
-   "address": "6 sylvester Dabo close, Appollo Cress, South Plateau State5",
+   "address": "6 Sylvester Dabo Close, Apollo Cres, South, Jos, Plateau",
    "image1":"/images/valada1.png",
     "id": 7
 },
@@ -176,7 +176,7 @@
     "title": "Becardi Restaurant and Cafe",
     "type": "Restaurants",
    "date": "25th July to 5th August 2024",
-   "address": "6 sylvester Dabo close, Appollo Cress, South Plateau State5",
+   "address": "11 Dandaura Road, Off Wase Road, Plateau Jos",
    "image1":"/images/becardi.png",
     "id": 21
 },
@@ -184,7 +184,7 @@
     "title": "Dominoes Pizza Jos",
     "type": "Restaurants",
    "date": "25th July to 5th August 2024",
-   "address": "6 sylvester Dabo close, Appollo Cress, South Plateau State5",
+   "address": "193 Bauchi Rd, Jos 930105, Plateau",
    "image1":"/images/dominoes.png",
     "id": 22
 },
@@ -208,8 +208,8 @@
     "title": "Terminus Market",
     "type": "Markets",
    "date": "25th July to 5th August 2024",
-   "address": "6 sylvester Dabo close, Appollo Cress, South Plateau State5",
-   "image1":"/images/Terminus.png",
+   "address": "Terminus market, Jos 930105, Plateau",
+   "image1":"/images/t1.jpg",
   
     "id": 25
 },
@@ -217,7 +217,7 @@
     "title": "Tomatoes Market",
     "type": "Markets",
    "date": "25th July to 5th August 2024",
-   "address": "6 sylvester Dabo close, Appollo Cress, South Plateau State5",
+   "address": "XV58+JCG, Farin Gada Rd, Jos 930105",
    "image1":"/images/a2.png",
     "id": 26
 },
@@ -225,7 +225,7 @@
     "title": "Katako Market",
     "type": "Markets",
    "date": "25th July to 5th August 2024",
-   "address": "6 sylvester Dabo close, Appollo Cress, South Plateau State5",
+   "address": "WVVH+86R, Jos 930105, Plateau",
    "image1":"/images/a1.png",
     "id": 27
 },
@@ -233,7 +233,7 @@
     "title": "Mai Adiko Market Jos",
     "type": "Markets",
    "date": "25th July to 5th August 2024",
-   "address": "6 sylvester Dabo close, Appollo Cress, South Plateau State5",
+   "address": "WVVH+86R, Jos 930105, Plateau",
    "image1":"/images/a3.png",
     "id": 28
 },
@@ -306,7 +306,7 @@
     "title": "Designers Meetup",
     "type": "All",
    "date": "25th July 2024",
-   "address": "Suit 70 Marinjo House Juction, Jos",
+   "address": "Suit 7b Korinjo House Juction, Jos",
    "image1":"/images/c1.png",
    
     "id": 37
@@ -315,7 +315,7 @@
     "title": "Designers Meetup",
     "type": "All",
    "date": "25th July 2024",
-   "address": "Suit 70 Marinjo House Juction, Jos",
+   "address": "Suit 7b Korinjo House Juction, Jos",
    "image1":"/images/c1.png",
    
     "id": 38

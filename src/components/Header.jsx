@@ -3,7 +3,7 @@ import "../style.css"
 import { Link } from "react-router-dom";
 import axios from 'axios';
 
-const Header2 = () => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
@@ -28,6 +28,7 @@ const Header2 = () => {
       setData([]);
     }
   }, [search]);
+
 
   return (
     <>
@@ -139,4 +140,4 @@ const Header2 = () => {
   );
 }
 
-export default Header2;
+export default Header;

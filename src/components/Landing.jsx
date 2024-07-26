@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react'
 // import Navbar from './Navbar';
 import Footer from './Footer';
 // import Header from './Header';
+import ImgTransform from './ImgTransform';
 import { Link } from 'react-router-dom';
 
 const Landing =()=>{
@@ -29,14 +30,33 @@ const Landing =()=>{
     </section>
 
 
-    <section className="py-12  px-[1rem]">
-        <div className="container mx-auto">
-            <div className="flex lg:flex-row flex-col items-center gap-6 min-h-[20%]">
-                    <img src="/images/Frame 43 (1).png" alt="Rayfield Resort" className="rounded-lg shadow-md overflow-hidden w-[100%] h-[100%] object-cover"/>
-                    <img src="/images/Frame 46.png " alt="Asop Water Falls" className="rounded-lg shadow-md overflow-hidden w-[100%] h-[100%] object-cover"/>
-                    <img src="/images/Frame 45.png" alt="Play Station" className="rounded-lg shadow-md overflow-hidden w-[100%] h-[100%] object-cover"/>
-            </div>
-            </div>
+    <section class="px-[1rem]">
+    <div className="App flex lg:justify-center space-x-4 p-4 lg:h-[40rem] items-center">
+      <div className="img ">
+        <ImgTransform
+        imageUrl="/images/Frame 43 (1).png"
+        altText="Second Image"
+        hoverText="Asop Water Falls"
+      />
+      </div>
+      <div className="img w-[26rem]">
+      <ImgTransform
+        imageUrl="/images/Frame 46.png "
+        altText="First Image"
+        hoverText="Rayfield Resort"
+      />
+      </div>
+      <div className="img">
+        <ImgTransform
+        imageUrl="/images/Frame 45.png"
+        altText="Third Image"
+        hoverText="Play Station"
+      />
+      </div>
+      
+      
+      
+    </div>    
             <div className="text-center mt-8">
                 <Link to="/see" className="inline-block bg-green-600 font-semibold text-[.95rem] text-white py-2 px-10 rounded">See All</Link>
             </div>
