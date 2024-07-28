@@ -63,11 +63,12 @@ const Header = () => {
 
   return (
     <>
+
       <nav className='header'>
         <div className='header-container'>
           <div>
             <Link to='/'>
-              <img src="/images/logo.png" alt="Logo" className="h-[100px] w-[70px] float-right" />
+              <img src="/images/logo.png" alt="Logo" className="h-[100px] w-[70px] lg:ml-auto lg:mr-0 mr-auto" />
             </Link>
           </div>
 
@@ -104,11 +105,8 @@ const Header = () => {
               </div>
             </form>
           </div>
-        </div>
-      </nav>
 
-      {/* Mobile Menu */}
-      <div>
+          <div>
         <button onClick={toggleMenu} className="hamburger lg:hidden ">
           &#9776;
         </button>
@@ -147,6 +145,13 @@ const Header = () => {
         </div>
       </div>
 
+        </div>
+          {/* Mobile Menu */}
+       
+      </nav>
+
+    
+      
       {/* Main Content */}
       <div className="content">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
