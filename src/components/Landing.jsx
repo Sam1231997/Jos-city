@@ -1,5 +1,5 @@
 
-import {useState, useEffect} from 'react'
+// import {useState, useEffect} from 'react'
 // import {cards} from './Cards'
 // import Navbar from './Navbar';
 import Footer from './Footer';
@@ -30,7 +30,7 @@ const Landing =()=>{
     </section>
 
 
-    <section class="px-[1rem]">
+    <section className="px-[1rem]">
     <div className="App flex lg:justify-center space-x-4 p-4 lg:h-[40rem] items-center">
       <div className="img ">
         <ImgTransform

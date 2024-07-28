@@ -35,12 +35,13 @@ import Footer from "./Footer";
 
 const App = () => {
   return(
-    <BrowserRouter>
-    <Header/>
-
-  <Routes>
     
-    <Route path="/" element={<Landing/>}/>
+   <BrowserRouter>
+     <Header/> 
+
+   <Routes> 
+   
+     <Route path="/" element={<Landing/>}/>
      <Route path="/see" element ={<Seeall/>}/>
     <Route path="/nowij" element={<NowIJ />} />
     <Route path="/shopping" element={<Shopping/>} />
@@ -50,11 +51,11 @@ const App = () => {
     <Route path="/details" element ={<Details/>}/>
     <Route path="/upcoming" element ={<Upcoming/>}/>
     <Route path="/hospital" element ={<Hospital/>}/>
-    <Route path="/appartment" element ={<Appartment/>}/>
+    <Route path="/appartment" element ={<Appartment/>}/> 
 
-  </Routes>
+   </Routes> 
 
-</BrowserRouter>
+</BrowserRouter> 
   )
   
 }

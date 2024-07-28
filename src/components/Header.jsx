@@ -1,34 +1,65 @@
 import { useState, useEffect } from 'react';
-import "../style.css"
+import "../style.css";
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import EventCard from './Card';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
   const [search, setSearch] = useState('');
-  const [filter, setFilter] = useState('All');
   const [data, setData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [events, setEvents] = useState([]);
+
+
+ useEffect(()=>{
+          fetch('https://j-city.onrender.com/api/v1/tour')
+          .then(response => response.json())
+          .then(data => {
+            // setEvents(data);
+            setEvents(Array.isArray(data.data) ? data.data : []);
+            setFilteredData(Array.isArray(data.data) ? data.data : []);
+            console.log(data)
+            setLoading(false);
+          })
+          .catch(error => {
+            setError(error);
+            setLoading(false);
+          });
+      }, []);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get('https://j-city.onrender.com/api/v1/tour');
+  //       setData(response.data); // Assuming your API returns an array of items
+  //       setFilteredData(response.data); // Initialize filtered data
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, []);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`http://localhost:7000/dbdata`);
-        setData(response.data); // Assuming your API returns an array of items
-        console.log(response.data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
+    if (Array.isArray(data)) { // Ensure data is an array
+      if (search.trim() === '') {
+        setFilteredData(data); // If search is empty, show all data
+      } else {
+        setFilteredData(
+          events.filter(item => 
+            item.title.toLowerCase().includes(search.toLowerCase()) ||
+            item.address.toLowerCase().includes(search.toLowerCase())
+          )
+        );
       }
-    };
-
-    if (search.trim() !== '') {
-      fetchData();
-    } else {
-      setData([]);
     }
-  }, [search]);
-
+  }, [search, events]);
 
   return (
     <>
@@ -61,11 +92,13 @@ const Header = () => {
           </div>
 
           <div className='hidden lg:flex'>
-            <form onChange={(e) => setSearch(e.target.value)}>
+            <form>
               <div className="">
                 <input
                   type="text"
                   placeholder="Search"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
                   className="px-4 py-2 border border-gray-300 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-green-600"
                 />
               </div>
@@ -76,7 +109,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div>
-        <button onClick={toggleMenu} className="hamburger">
+        <button onClick={toggleMenu} className="hamburger lg:hidden ">
           &#9776;
         </button>
         <div className={`mobile-menu ${isMenuOpen ? 'open' : 'closed'}`}>
@@ -99,11 +132,13 @@ const Header = () => {
           </div>
 
           <div>
-            <form onChange={(e) => setSearch(e.target.value)}>
+            <form>
               <div className="">
                 <input
                   type="text"
                   placeholder="Search"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
                   className="px-4 py-2 border border-gray-300 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-green-600"
                 />
               </div>
@@ -115,25 +150,16 @@ const Header = () => {
       {/* Main Content */}
       <div className="content">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {data
-            .filter((item) => {
-              return search.toLowerCase() === '' ? item
-                : item.type.toLowerCase().includes(search);
-            })
-            .map((item) => (
-              <div className="bg-gray-100 border border-gray-200 rounded-lg overflow-hidden" key={item.id}>
-                <img src={item.image1} alt="Terminus" className="w-full min-h-48 object-cover lg:p-4" />
-                <div className="p-4">
-                  <h3 className="text-[1rem] lg:text-xl font-bold text-gray-800 pb-2">{item.title}</h3>
-                  <p className="text-[.75rem] lg:text-[1rem] text-gray-600 pb-1">{item.date}</p>
-                  <p className="text-[.75rem] lg:text-[1rem] text-gray-600">{item.address}</p>
-                  <div className="flex items-center justify-between mt-4">
-                    <a href="details.html" className="bg-green-200 text-green-600 b-green-500 px-2 py-[.4rem] lg:px-4 lg:py-2 rounded-lg hover:text-green-700 text-[.75rem] lg:text-[1rem]">More Info</a>
-                    <a href="#" className="bg-green-700 text-white px-2 py-[.4rem] lg:px-4 lg:py-2 rounded-lg text-[.75rem] lg:text-[1rem]">Get Directions</a>
-                  </div>
-                </div>
-              </div>
-            ))}
+          {Array.isArray(filteredData) && filteredData.map((item) => (
+            <EventCard
+              key={item._id}
+              image={item.image}
+              title={item.title}
+              date={item.date}
+              address={item.address}
+              category={item.category}
+            />
+          ))}
         </div>
       </div>
     </>
