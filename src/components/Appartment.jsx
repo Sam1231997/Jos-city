@@ -62,7 +62,7 @@ const Appartment=()=>{
    
 {/* BACKEND SIDE */}
     <div className="p-4">
-      <div className="flex space-x-4 mb-4">
+    <div className="flex flex-wrap space-x-4 mb-4 md:space-x-4">
         {['All',  '4+ Rating', 'Price','Amenities','Property type','Parties'].map(category => (
           <button
             key={category}

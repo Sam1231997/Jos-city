@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import "../style.css";
 import { Link } from "react-router-dom";
-import axios from 'axios';
+// import axios from 'axios';
 import EventCard from './Card';
 
 const Header = () => {
