@@ -22,14 +22,15 @@
     top: 50px; /* Adjust this value if needed to align with your hamburger button */
     left: 0;
     width: 100%;
-    height: calc(100% - 50px); /* Adjust this value based on the height of your hamburger button */
-    background-color:white;
+    height: calc(100% - 50%); /* Adjust this value based on the height of your hamburger button */
+    background-color:rgb(41, 158, 41);
     z-index: 50;
     display: flex;
     flex-direction: column;
     justify-content: start;
     padding: 10px;
     transition: transform 0.3s ease-in-out;
+ 
   }
   
   .mobile-menu.open {
@@ -44,7 +45,7 @@
     font-size: 24px;
     cursor: pointer;
     position: fixed;
-    top: 10px;
+    top: 25px;
     left: 10px;
     z-index: 1000;
     transition: opacity 0.3s ease-in-out;
@@ -73,5 +74,5 @@
   }
   
   .content {
-    margin-top: 130px; /* Adjust based on header height to prevent content from hiding behind header */
+    margin-top: 100px; /* Adjust based on header height to prevent content from hiding behind header */
   }

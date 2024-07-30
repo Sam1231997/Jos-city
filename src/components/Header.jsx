@@ -65,15 +65,19 @@ const Header = () => {
     <>
 
       <nav className='header'>
-        <div className='header-container'>
-          <div>
+     
+        <div className='header-container flex justify-between'>
+        <div className='hidden lg:flex'>
             <Link to='/'>
-              <img src="/images/logo.png" alt="Logo" className="h-[100px] w-[70px] lg:ml-auto lg:mr-0 mr-auto" />
+              <img src="/images/logo.png" alt="Logo" className="h-[80px] w-[70px] lg:ml-auto lg:mr-0 mr-auto " />
             </Link>
-          </div>
+        </div>
 
           <div className="flex items-center space-x-4">
             <div className="hidden md:flex gap-4 font-semibold ">
+            <div className="relative-group">
+                <Link to='/' className="text-black hover:text-green-600 font-poppins">Home</Link>
+              </div>
               <div className="relative-group">
                 <Link to='/nowij' className="text-black hover:text-green-600 font-poppins">Now In Jos</Link>
               </div>
@@ -106,10 +110,20 @@ const Header = () => {
             </form>
           </div>
 
-          <div>
-        <button onClick={toggleMenu} className="hamburger lg:hidden ">
+ {/* Mobile Menu */}
+
+      <div>
+      <div>
+        <button onClick={toggleMenu} className="hamburger lg:hidden float-right">
           &#9776;
         </button>
+        <div className="block lg:hidden">
+          <Link to='/'>
+            <img src="/images/logo.png" alt="Logo" className="h-[80px] w-[70px]" />
+          </Link>
+        </div>
+</div>
+       
         <div className={`mobile-menu ${isMenuOpen ? 'open' : 'closed'}`}>
           <div className="flex flex-col space-y-4 mb-4">
             <div className="relative-group">
@@ -145,8 +159,8 @@ const Header = () => {
         </div>
       </div>
 
-        </div>
-          {/* Mobile Menu */}
+      </div>
+         
        
       </nav>
 

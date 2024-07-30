@@ -63,12 +63,12 @@ const Hospital=()=>{
    
 {/* BACKEND SIDE */}
     <div className="p-4">
-      <div className="flex space-x-4 mb-4">
+    <div className="flex flex-wrap space-x-4 mb-4 md:space-x-4">
         {['All',  '4+ Rating', 'Price','Amenities','Property type','Parties'].map(category => (
           <button
             key={category}
             onClick={() => setFilter(category)}
-            className={`px-4 py-2 rounded-lg ${filter === category ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-800'}`}
+            className={`${filter === category ? 'bg-green-500 text-white' : 'bg-white text-[.8rem] lg:text-[1rem] text-gray-700 border py-[0.4rem] px-[0.7rem] lg:py-2 lg:px-4 rounded focus:outline-none'}`}
           >
             {category}
           </button>

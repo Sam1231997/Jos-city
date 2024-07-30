@@ -24,6 +24,7 @@ import Details from "./detail";
 import Upcoming from "./Upcoming";
 import Hospital from "./Hospital";
 import Appartment from "./Appartment";
+import ImageSlider from "./ImageSlider";
 import Page from "./Page";
 import Footer from "./Footer";
 // import Header2 from "../Header2";
@@ -35,7 +36,7 @@ import Footer from "./Footer";
 
 const App = () => {
   return(
-    
+   
    <BrowserRouter>
      <Header/> 
 

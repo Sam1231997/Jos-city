@@ -42,7 +42,7 @@ const Accomodation=()=>{
        
         <div>
         <div className="relative bg-cover bg-center min-h-[6rem]">
-    <div className=" bg-contain bg-no-repeat w-[100%] min-h-[6rem] lg:bg-cover lg:min-h-[23rem] lg:w-full lg:bg-center">
+    <div className="  w-[100%] min-h-[6rem] lg:bg-cover lg:min-h-[23rem] lg:w-full lg:bg-center">
         <img src="/images/work.png" alt="" />
     </div>
 </div>
@@ -68,7 +68,7 @@ const Accomodation=()=>{
           <button
             key={type}
             onClick={() => setFilter(type)}
-            className={`px-4 py-2 rounded-lg ${filter === type ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-800'}`}
+            className={`${filter === type ? 'bg-green-500 text-white' : 'bg-white text-[.8rem] lg:text-[1rem] text-gray-700 border py-[0.4rem] px-[0.7rem] lg:py-2 lg:px-4 rounded focus:outline-none'}`}
           >
             {type}
           </button>
