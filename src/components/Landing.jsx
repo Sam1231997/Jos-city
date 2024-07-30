@@ -5,7 +5,7 @@
 import Footer from './Footer';
 // import Header from './Header';
 import ImgTransform from './ImgTransform';
-import ImageSlider from './ImageSlider';
+// import ImageSlider from './ImageSlider';
 import { Link } from 'react-router-dom';
 
 const Landing =()=>{
@@ -32,7 +32,7 @@ const Landing =()=>{
 
     <section className="px-4 md:px-8 lg:px-16 ">
  
-        <ImageSlider/>  
+        {/* <ImageSlider/>   */}
         </section>
             <div className="text-center mt-8">
                 <Link to="/attraction" className="inline-block bg-green-600 font-semibold text-[.95rem] text-white py-2 px-5 lg:py-2 lg:px-10 rounded">See All</Link>
