@@ -4,11 +4,14 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
       <title>JCITY TOUR</title>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300"
-      />
-      <link rel="stylesheet" href="styles.css" />
+      <link rel="preload" href="styles.css" as="style">
+  
+      <!-- Preload critical fonts -->
+      <link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300" as="style">
+    
+      <!-- Link to the stylesheets -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300">
+      <link rel="stylesheet" href="styles.css">
     </head>
     
     <body>
