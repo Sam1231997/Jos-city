@@ -126,6 +126,9 @@ const Header = () => {
        
         <div className={`mobile-menu ${isMenuOpen ? 'open' : 'closed'}`}>
           <div className="flex flex-col space-y-4 mb-4">
+          <div className="relative-group">
+              <Link to='/' className="text-black hover:text-green-600" onClick={closeMenu}>Home</Link>
+            </div>
             <div className="relative-group">
               <Link to='/nowij' className="text-black hover:text-green-600" onClick={closeMenu}>Now In Jos</Link>
             </div>
