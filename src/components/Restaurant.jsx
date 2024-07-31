@@ -5,7 +5,8 @@ import {useState, useEffect} from 'react'
 // import Navbar from './Navbar';
 import Footer from './Footer';
 import EventCard from './Card';
-import axios from 'axios';
+import PropagateLoader from 'react-spinners/PropagateLoader'
+// import axios from 'axios';
 // import Afternav from './Afternav';
 // import Dbcards from './Dbcards';
 
@@ -33,8 +34,12 @@ const Restaurant=()=>{
           });
       }, []); // Empty dependency array means this effect runs once on mount
     
-      if (loading) return <p>Loading...</p>;
-      if (error) return <p>Error: {error.message}</p>;
+      if (loading) return <div className='Loader'>
+        {<PropagateLoader color={'rgba(0, 128, 0, 1)'}
+      />}</div>
+      
+     
+            if (error) return <p>Error: {error.message}</p>;
     
 
   const filteredEvents = filter === 'All' ? events.slice(19,23) : events.filter(event => event.category === filter);
@@ -55,7 +60,7 @@ const Restaurant=()=>{
 <div className="container mx-auto px-4 py-12">
     <div className="flex justify-between flex-col lg:flex-row">
         <div className="flex items-center gap-1">
-            <h2 className="lg:text-[1.8rem] text-xl font-bold lg:font-semibold">RESTAURANTS</h2>
+            <h2 className="lg:text-[1.8rem] text-xl font-bold lg:font-semibold underline decoration-green-500">RESTAURANTS</h2>
        
         </div>
         

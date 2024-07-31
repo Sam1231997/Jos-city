@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 // import axios from 'axios';
 import EventCard from './Card';
 import Dropdown2 from './Dropdown2';
+import RiseLoader from 'react-spinners/RiseLoader'
 
 const Accomodation=()=>{
   const [filter, setFilter] = useState('All');
@@ -31,7 +32,9 @@ const Accomodation=()=>{
           });
       }, []); // Empty dependency array means this effect runs once on mount
     
-      if (loading) return <p>Loading...</p>;
+      if (loading) return <div className='Loader'>
+      {<RiseLoader color={'rgba(0, 128, 0, 1)'}
+    />}</div>
       if (error) return <p>Error: {error.message}</p>;
     
 
@@ -52,7 +55,7 @@ const Accomodation=()=>{
 <div className="container mx-auto px-4 py-12">
     <div className="flex justify-between flex-col lg:flex-row">
         <div className="flex items-center gap-1">
-            <h2 className="lg:text-[1.8rem] text-xl font-bold lg:font-semibold ">HOTELS</h2>
+            <h2 className="lg:text-[1.8rem] text-xl font-bold lg:font-semibold underline decoration-green-500 ">HOTELS</h2>
             <Dropdown2/>
         </div>
         

@@ -5,6 +5,7 @@ import {useState, useEffect} from 'react'
 // import Navbar from './Navbar';
 import Footer from './Footer';
 import EventCard from './Card';
+import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader'
 // import Afternav from './Afternav';
 // import Dbcards from './Dbcards';
 
@@ -34,11 +35,14 @@ const Attraction=()=>{
           });
       }, []); // Empty dependency array means this effect runs once on mount
     
-      if (loading) return <p>Loading...</p>;
+      if (loading) return <div className='Loader'>
+      {<ClimbingBoxLoader color={'rgba(0, 128, 0, 1)'}
+    />}</div>
+    
       if (error) return <p>Error: {error.message}</p>;
     
 
-    const filteredEvents = filter === 'All' ? events.slice(28,36) : events.filter(event => event.category === filter);
+    const filteredEvents = filter === 'All' ? events.slice(29,36) : events.filter(event => event.category === filter);
     
     return(
       
@@ -51,12 +55,12 @@ const Attraction=()=>{
 </div>
 
 {/* // <!-- Body --> */}
-<div className="container mx-4 px-4 py-12">
+
 
 <div className="container mx-auto px-4 py-12">
     <div className="flex justify-between flex-col lg:flex-row">
         <div className="flex items-center gap-1">
-            <h2 className="lg:text-[1.8rem] text-xl font-bold lg:font-semibold">ATTRACTIONS</h2>
+            <h2 className="lg:text-[1.8rem] text-xl font-bold lg:font-semibold underline decoration-green-500  ">ATTRACTIONS</h2>
            
         
         </div>
@@ -97,7 +101,7 @@ const Attraction=()=>{
       ))}
     </div>
       </div>
-    </div>
+   
 
 
       <Footer/>

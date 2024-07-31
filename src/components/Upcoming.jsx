@@ -8,6 +8,7 @@ import Footer from './Footer';
 // import axios from 'axios';
 import EventCard from './Card';
 import Dropdown from './Dropdown';
+import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader';
 
 // import useFetch from './useFetch';
 
@@ -34,7 +35,10 @@ const Upcoming =()=>{
           });
       }, []); // Empty dependency array means this effect runs once on mount
     
-      if (loading) return <p>Loading...</p>;
+      if (loading) return <div className='Loader'>
+      {<ClimbingBoxLoader color={'rgba(0, 128, 0, 1)'}
+    />}</div>
+    
       if (error) return <p>Error: {error.message}</p>;
     
   
@@ -57,7 +61,7 @@ const Upcoming =()=>{
 <div className="container mx-auto px-4 py-12">
     <div className="flex justify-between flex-col lg:flex-row">
         <div className="flex items-center gap-1">
-            <h4 className="lg:text-[1.8rem] text-l font-bold lg:font-semibold">UPCOMING EVENTS</h4>
+            <h4 className="lg:text-[1.8rem] text-l font-bold lg:font-semiboldunderline decoration-green-500 ">UPCOMING EVENTS</h4>
             <Dropdown/>
         </div>
         

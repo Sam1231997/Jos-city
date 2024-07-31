@@ -5,7 +5,8 @@ import {useState, useEffect} from 'react'
 // import { Object } from '../../Object';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
-import axios from 'axios';
+// import axios from 'axios';
+import PacmanLoader from 'react-spinners/PacmanLoader'
 import Dropdown from './Dropdown';
 import EventCard from './Card';
 
@@ -33,7 +34,9 @@ const NowIJ =()=>{
           });
       }, []); // Empty dependency array means this effect runs once on mount
     
-      if (loading) return <p>Loading...</p>;
+      if (loading) return <div className='Loader'>
+      {<PacmanLoader color={'rgba(0, 128, 0, 1)'}
+    />}</div>
       if (error) return <p>Error: {error.message}</p>;
     
   
@@ -56,7 +59,7 @@ const NowIJ =()=>{
 <div className="container mx-auto px-4 py-12">
     <div className="flex justify-between flex-col lg:flex-row">
         <div className="flex items-center gap-1">
-            <h4 className="lg:text-[1.8rem] text-l font-bold lg:font-semibold">CURRENT EVENTS</h4>
+            <h4 className="lg:text-[1.8rem] text-l font-bold lg:font-semibold underline decoration-green-500">CURRENT EVENTS</h4>
             <Dropdown/>
         </div>
         

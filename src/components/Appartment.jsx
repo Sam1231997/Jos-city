@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader';
 // import {cards} from './Cards'
 // import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -9,6 +10,7 @@ import Footer from '../components/Footer';
 // import axios from 'axios';
 import EventCard from './Card';
 import Dropdown2 from './Dropdown2';
+import ScaleLoader from 'react-spinners/ScaleLoader'
 
 const Appartment=()=>{
   const [filter, setFilter] = useState('All');
@@ -31,7 +33,10 @@ const Appartment=()=>{
           });
       }, []); // Empty dependency array means this effect runs once on mount
     
-      if (loading) return <p>Loading...</p>;
+      if (loading) return <div className='Loader'>
+      {<ScaleLoader color={'rgba(0, 128, 0, 1)'}
+    />}</div>
+    
       if (error) return <p>Error: {error.message}</p>;
 
   const filteredEvents = filter === 'All' ? events.slice(12,16): events.filter(event => event.category === filter);

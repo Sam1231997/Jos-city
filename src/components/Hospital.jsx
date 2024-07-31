@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader';
 // import {cards} from './Cards'
 // import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -31,7 +32,10 @@ const Hospital=()=>{
           });
       }, []); // Empty dependency array means this effect runs once on mount
     
-      if (loading) return <p>Loading...</p>;
+      if (loading) return <div className='Loader'>
+      {<ClimbingBoxLoader color={'rgba(0, 128, 0, 1)'}
+    />}</div>
+    
       if (error) return <p>Error: {error.message}</p>;
     
 
@@ -52,7 +56,7 @@ const Hospital=()=>{
 <div className="container mx-auto px-4 py-12">
     <div className="flex justify-between flex-col lg:flex-row">
         <div className="flex items-center gap-1">
-            <h2 className="lg:text-[1.8rem] text-xl font-bold lg:font-semibold ">HOSPITALS</h2>
+            <h2 className="lg:text-[1.8rem] text-xl font-bold lg:font-semibold underline decoration-green-500 ">HOSPITALS</h2>
             <Dropdown2/>
         </div>
         
