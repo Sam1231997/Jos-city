@@ -71,14 +71,14 @@ const Restaurant=()=>{
  
 {/* BACKEND SIDE */}
 <div className="p-4">
-  <div className="flex flex-wrap space-y-2 sm:space-y-0 sm:space-x-4 mb-4">
+<div className="flex flex-wrap space-x-4 mb-4 md:space-x-4">
     {['All', 'Restaurants', '4+ Rating', 'Location', 'Service'].map((category) => (
       <button
         key={category}
         onClick={() => setFilter(category)}
         className={` ${
           filter === category ? 'bg-green-500 text-white' : 'bg-white text-[.8rem] lg:text-[1rem] text-gray-700 border py-[0.4rem] px-[0.7rem] lg:py-2 lg:px-4 rounded focus:outline-none'
-        } w-full sm:w-auto`}
+        } `}
       >
         {category}
       </button>
