@@ -127,22 +127,22 @@ const Header = () => {
         <div className={`mobile-menu ${isMenuOpen ? 'open' : 'closed'}`}>
           <div className="flex flex-col space-y-4 mb-4">
           <div className="relative-group">
-              <Link to='/' className="text-black hover:text-green-600 font-semibold" onClick={closeMenu}>Home</Link>
+              <Link to='/' className="text-black hover:text-green-600 bg-white-600" onClick={closeMenu}>Home</Link>
             </div>
             <div className="relative-group">
-              <Link to='/nowij' className="text-black hover:text-green-600 font-semibold" onClick={closeMenu}>Now In Jos</Link>
+              <Link to='/nowij' className="text-black hover:text-green-600 bg-white-600" onClick={closeMenu}>Now In Jos</Link>
             </div>
             <div className="relative-group">
-              <Link to='/accomodation' className="text-black hover:text-green-600 font-semibold" onClick={closeMenu}>Accommodations</Link>
+              <Link to='/accomodation' className="text-black hover:text-green-600 bg-white-600" onClick={closeMenu}>Accommodations</Link>
             </div>
             <div className="relative-group">
-              <Link to='/restaurant' className="text-black hover:text-green-600 font-semibold" onClick={closeMenu}>Restaurants</Link>
+              <Link to='/restaurant' className="text-black hover:text-green-600 bg-white-600" onClick={closeMenu}>Restaurants</Link>
             </div>
             <div className="relative-group">
-              <Link to='/shopping' className="text-black hover:text-green-600 font-semibold" onClick={closeMenu}>Shopping</Link>
+              <Link to='/shopping' className="text-black hover:text-green-600 bg-white-600" onClick={closeMenu}>Shopping</Link>
             </div>
             <div className="relative-group">
-              <Link to='/attraction' className="text-black hover:text-green-600 font-semibold font-semibold" onClick={closeMenu}>Attractions</Link>
+              <Link to='/attraction' className="text-black hover:text-green-600 bg-white-600" onClick={closeMenu}>Attractions</Link>
             </div>
           </div>
 
