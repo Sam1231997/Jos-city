@@ -24,6 +24,9 @@ import Details from "./detail";
 import Upcoming from "./Upcoming";
 import Hospital from "./Hospital";
 import Appartment from "./Appartment";
+
+import Details2 from "./details2";
+import Details3 from "./details3";
 // import ImageSlider from "./ImageSlider";
 import Page from "./Page";
 import Footer from "./Footer";
@@ -49,10 +52,13 @@ const App = () => {
     <Route path="/attraction" element={<Attraction/>} />
     <Route path="/accomodation" element={<Accomodation/>} />
     <Route path="/restaurant" element={<Restaurant/>} /> 
-    <Route path="/details" element ={<Details/>}/>
+    <Route path="/detail1" element ={<Details/>}/>
     <Route path="/upcoming" element ={<Upcoming/>}/>
     <Route path="/hospital" element ={<Hospital/>}/>
-    <Route path="/appartment" element ={<Appartment/>}/> 
+    <Route path="/appartment" element ={<Appartment/>}/>
+    <Route path="/details2" element ={<Details2/>} />
+    <Route path="/details3" element ={<Details3/>}/>
+    
 
    </Routes> 
 

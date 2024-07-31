@@ -1,10 +1,7 @@
 
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
-// import EventCard from './Card';
-
-const Details=()=>{
-
+const Details2=()=>{
 
     return(
         <>
@@ -21,20 +18,20 @@ const Details=()=>{
      
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-[4rem] mb-4">
             <div>
-                <img src='/images/Frame 43.png' alt="Hotel Image" className="w-full rounded-lg shadow-md"/>
+                <img src='/images/u1.png' alt="Hotel Image" className="w-full rounded-lg shadow-md"/>
             </div>
             <div>
-                <h2 className="lg:text-[1.8rem] text-[1.15rem] font-bold lg:font-semibold lg:mt-4 mb-4">Valada Hotel and Resorts Ltd.</h2>
+                <h2 className="lg:text-[1.8rem] text-[1.15rem] font-bold lg:font-semibold lg:mt-4 mb-4">Orange Festival.</h2>
                 <div className="mb-4">
                     <h3 className="text-[.9rem] lg:text-lg font-semibold">POPULAR AMENITIES</h3>
-                    <p className="text-[.85rem] lg:text-[1rem]">Spa · Parking · Breakfast · Wi-Fi</p>
+                    <p className="text-[.85rem] lg:text-[1rem]">Orange Festival</p>
                 </div>
                 <div className="mb-4">
-                    <h3 className="text-[.9rem] lg:text-lg font-semibold">HOURS</h3>
-                    <p className="text-[.85rem] lg:text-[1rem]">Check-in time: 14:00</p>
-                    <p className="text-[.85rem] lg:text-[1rem]">Check-out time: 12:00</p>
+                    <h3 className="text-[.9rem] lg:text-lg font-semibold">Venue</h3>
+                    <p className="text-[.85rem] lg:text-[1rem]">Lorem Ipsum</p>
+                    <p className="text-[.85rem] lg:text-[1rem]">Lorem Ipsum</p>
                 </div>
-                <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(" 6 Sylvester Dabo Close, Apollo Cres, South, Jos, Plateau")}`} className="bg-green-700 text-white px-2 py-[.4rem] lg:px-4 lg:py-2 rounded-lg text-[.75rem] lg:text-[1rem]">Get Directions</a>
+                <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Lamingo, Rayfield, Plateau state")}`} className="bg-green-700 text-white px-2 py-[.4rem] lg:px-4 lg:py-2 rounded-lg text-[.75rem] lg:text-[1rem]">Get Directions</a>
             </div>
         </div>
        
@@ -43,4 +40,4 @@ const Details=()=>{
         </>
     )
 }
-export default Details;
+export default Details2;

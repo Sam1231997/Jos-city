@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Images from './Images'
-import Cards from './Cards'
+// import Cards from './Cards'
 // import { NavLink } from 'react-router-dom'
 // import Footer from '../Footer'
 // import Nav from '../Nav'

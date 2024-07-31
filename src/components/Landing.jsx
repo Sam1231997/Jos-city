@@ -52,7 +52,7 @@ const Landing =()=>{
                     <h2 className="text-[1rem] lg:text-2xl font-semibold lg:pt-[6rem]">Bacardi Restaurant and Cafe</h2>
                     <p className="pt-[1rem] lg:pt-[1.8rem] text-[.8rem] lg:text-[1rem]">11 Dandaura Road, Off Wase Road, GRA, Jos, Plateau</p>
                     <div className="pt-[1.8rem] lg:pt-[5rem] pb-[1.5rem]">
-                        <a href="#" className="cursor-pointer bg-green-600 px-6 py-2 text-white text-[.8rem] lg:text-[1rem] font-semibold rounded-md">View Details</a>
+                        <Link to="/detail1" className="cursor-pointer bg-green-600 px-6 py-2 text-white text-[.8rem] lg:text-[1rem] font-semibold rounded-md">View Details</Link>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@ const Landing =()=>{
                         <p className="mt-2 text-[.7rem] lg:text-[1rem]">To be Announced</p>
                         <div className="flex justify-between pt-[1rem]">
                             <p className="mt-2 text-[.7rem] font-semibold lg:text-[1rem]">Coming Soon</p>
-                            <a href="#" className="inline-block bg-green-600 text-white text-[.6rem] lg:text-[1rem] font-semibold py-2 px-3 rounded">View Details</a>
+                            <Link to="/details2" className="inline-block bg-green-600 text-white text-[.6rem] lg:text-[1rem] font-semibold py-2 px-3 rounded">View Details</Link>
                         </div>
                     </div>
                 </div>
@@ -88,7 +88,7 @@ const Landing =()=>{
                         <p className="mt-2 text-[.7rem] lg:text-[1rem]">Lamingo, Rayfield, Plateau State</p>
                         <div className="flex justify-between pt-[1rem]">
                             <p className="mt-2 text-[.7rem] font-semibold lg:text-[1rem]">29th August - 3rd September 2023</p>
-                            <a href="#" className="inline-block bg-green-600 text-white text-[.6rem] lg:text-[1rem] font-semibold py-2  px-3 rounded">View Details</a>
+                            <Link to="/details3" className="inline-block bg-green-600 text-white text-[.6rem] lg:text-[1rem] font-semibold py-2  px-3 rounded">View Details</Link>
                         </div>
                     </div>
                 </div>
